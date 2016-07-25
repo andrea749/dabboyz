@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
-<title>CYCLE Cipher</title>
+<title>Vigenere Cipher</title>
+<head>
+  <link rel="stylesheet" type="text/css" href="../static/cycle.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+</head>
 <body>
-  <h1>CYCLE Cipher</h1>
-    <p>
-      The CYCLE cipher is similar to the classic Caesarian shift. However,
-      whereas the Caesar cipher only allows for 1 value of offset throughout a
-      string, the CYCLE cipher allows for multiple values of offset. The image
+  <h1>Vigenere Cipher</h1>
+  <p id = 'sidebar'>Ciphers <br>
+    <a id = 'caesar' href="http://www.braingle.com/brainteasers/codes/caesar.php">
+      Caesar<br>
+    </a>
+    <a id = 'keyword' href='http://www.braingle.com/brainteasers/codes/keyword.php'>
+      Keyword<br>
+    </a>
+  </p>
+    <p id = 'description'>
+      The Vigenere cipher is similar to the classic Caesarian shift but allows for multiple values of offset. The image
       below shows what each shift would look like.<br>
-      <image src = 'static/caesarshift.jpg' width = '300' height = '300' alt = "Caesar cipher wheel">
+      <image src = '../static/caesarshift2.jpg' width = '475' height = '200' alt = "Caesar cipher wheel">
         <br>
-      For example, with a cycle of length 3, one could choose 3 different
+      For example, a cycle of length 3 allows 3 different
       offsets. If one were to choose 1, 2, and 3 as their offsets, then the
-      first letter would be replaced with the next letter in the alphabet, the
+      first letter would be replaced with the next letter in the alphabet. Then, the
       second letter would be replaced with the letter that is two positions
       higher in the alphabet, the third letter would be replaced with the
-      letter that is 3 positions higher. Then, the fourth letter would be
-      replaced with the next letter in the alphabet and the cycle repeats.
+      letter that is 3 positions higher and the cycle repeats.
       Using this cycle and these shifts, the word "cereal" would then become
       "dgufco".
     </p>
-    <form method = 'post'>
+    <form method = 'post' id = 'form_text'>
       How long would you like your cycle to be? (Max 10)<input type = 'number' name = 'cycle_size' min = '1' max = '10'>
       <br>
 
@@ -45,11 +54,9 @@
       What will the tenth shift be? (Max 25) <input type = 'number' name = 'shift10' min = '1' max = '25'>
       <br>
 
-      Insert message to encrypt:
+      Insert message to encrypt: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Insert message to decrypt: <br>
       <textarea rows='4' cols='50' name='normal_message'>{{decryptedmessage}}</textarea>
       <input type = 'submit' value = 'Encrypt' name = 'submitted'>
-      <br>
-      Insert message to decrypt:
       <textarea rows='4' cols='50' name='encrypted_message'>{{encryptedmessage}}</textarea>
       <input type = 'submit' value = 'Decrypt' name = 'submitted'>
     </form>
