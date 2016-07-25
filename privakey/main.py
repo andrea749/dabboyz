@@ -15,16 +15,74 @@
 # limitations under the License.
 #
 import webapp2
+import logging
+import jinja2
+import os
+import math
+from cycle_encryption import encryptor
+from cycle_encryption import decryptor
+
+
+template_dir = os.path.join(os.path.dirname(__file__), 'templates')
+jinja_environment = jinja2.Environment(
+    loader = jinja2.FileSystemLoader(template_dir))
+
+
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        template = jinja_environment.get_template('matrix.html')
+        self.response.write(template.render())
 
+    def post(self):
+        template = jinja_environment.get_template('homepage.html')
+        self.response.write(template.render())
 
-class ArticleHandler(webapp2.RequestHandler):
+class CycleHandler(webapp2.RequestHandler):
     def get(self):
+        template = jinja_environment.get_template('cycle.html')
+        self.response.write(template.render())
+
+    def post(self):
+        template = jinja_environment.get_template('cycle.html')
+        decision = self.request.get('submitted')
+        if decision == 'Encrypt':
+            decryptedmessage = self.request.get('normal_message')
+            encryptedmessage = self.Encryptor(decryptedmessage)
+
+        if decision == 'Decrypt':
+            encryptedmessage = self.request.get('encrypted_message')
+            decryptedmessage = self.Decryptor(encryptedmessage)
+
+        variables = {
+        'encryptedmessage':encryptedmessage,
+        'decryptedmessage':decryptedmessage
+        }
+        self.response.write(template.render(variables))
+
+    def Encryptor(self, message):
+        decryptedmessage = message
+        cycle_size = int(self.request.get('cycle_size'))
+        shifts = []
+        for i in range(1, cycle_size + 1):
+            shift = int(self.request.get('shift%s' % (i)))
+            shifts.append(shift)
+        answer = encryptor(decryptedmessage, cycle_size, shifts)
+        return answer
+
+    def Decryptor(self, message):
+        encryptedmessage = message
+        cycle_size = int(self.request.get('cycle_size'))
+        shifts = []
+        for i in range(1, cycle_size + 1):
+            shift = int(self.request.get('shift%s' % (i)))
+            shifts.append(shift)
+        answer = decryptor(encryptedmessage, cycle_size, shifts)
+        return answer
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/article', ArticleHandler)
+    ('/cycle', CycleHandler)
 ], debug=True)
