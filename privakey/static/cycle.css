@@ -1,0 +1,57 @@
+h1, p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #00ff00
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 0 0 20px #ffffff;
+}
+
+body {
+  background-color: black;
+}
+
+#form_text {
+  color: white;
+  line-height: 2;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  margin-left: 20%;
+}
+
+#sidebar {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  border-bottom: double;
+  border-right: double;
+  border-top: double;
+  border-color: #00ff00;
+  padding-right: 100px;
+  padding-top: 5px;
+  padding-bottom: 300px;
+  padding-left: 0px;
+}
+#caesar, #keyword {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  margin-left: 20%;
+  margin-right: auto;
+  text-shadow: 0 0 20px #ffffff;
+  position: relative;
+}
+
+#description {
+  margin-left: 20%;
+  margin-right: auto;
+  position: relative;
+  bottom: 100px;
+}
+
+textarea {
+  display: inline-block;
+}
