@@ -31,11 +31,11 @@ jinja_environment = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('matrix.html')
+        template = jinja_environment.get_template('Matrix.html')
         self.response.write(template.render())
 
     def post(self):
-        template = jinja_environment.get_template('homepage.html')
+        template = jinja_environment.get_template('welcomepage.html')
         self.response.write(template.render())
 
 class CycleHandler(webapp2.RequestHandler):
@@ -81,8 +81,14 @@ class CycleHandler(webapp2.RequestHandler):
         return answer
 
 
+class CaesarHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('cipherarticles.html')
+        self.response.write(template.render())
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/cycle', CycleHandler)
+    ('/cycle', CycleHandler),
+    ('/caesar', CaesarHandler)
 ], debug=True)
