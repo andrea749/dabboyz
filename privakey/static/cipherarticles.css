@@ -1,39 +1,22 @@
+#crypt {
+  color: white;
+  background-color: black;
+  text-shadow: 0 0 20px #00ff00, 0 0 20px #00ff00;
+  text-align: center;
+  left: 50px;
+  top: 50px;
+}
+
 #top {
+  font-family: 'Audiowide', cursive;
+  clear: both;
   text-align: center;
   font-size: 50px;
   color: #ffffff;
   text-shadow: 0 0 20px #ff1a1a, 0 0 20px #ff1a1a, 0 0 20px #ff1a1a, 0 0 20px #ff1a1a, 0 0 20px #ff1a1a;
 }
-#sidebar {
-  display: inline-block;
-  position: relative;
-  top: 10px;
-  border-bottom: double;
-  border-right: double;
-  border-top: double;
-  border-color: #00ff00;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 30px;
-  padding-left: 0px;
-}
-#caesar, #vigenere {
-  color: #00ff00;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: 0 0 20px #ffffff;
-  position: relative;
-}
-p {
-  color: #00ff00;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: 0 0 20px #ffffff;
-}
+
+
 
 body {
   background-color: #000000
@@ -45,14 +28,7 @@ body {
   color: #ffffff;
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
   position: relative;
-  bottom: 250px;
-}
-
-#description {
-  margin-left: 20%;
-  margin-right: auto;
-  position: relative;
-  bottom: 275px;
+  bottom: 220px;
 }
 
 button {
@@ -71,7 +47,149 @@ textarea {
 
 button {
   position: relative;
-  left: 20px;
+  left: 0px;
   top: 40px;
   background-color: black;
+  border: none;
+}
+
+#caesar:hover, #vigenere:hover {
+  text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
+}
+
+#crypt:hover {
+    text-shadow: 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00;
+}
+
+#caesar, #vigenere {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 0px;
+  border-bottom: double;
+  border-right: double;
+  border-top: double;
+  border-color: #00ff00;
+  padding-right: 80px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  color: #00ff00;
+  background-color: black;
+  /*margin-left: 20%;*/
+  margin-right: auto;
+  margin-left: auto;
+  text-shadow: 0 0 20px #ffffff;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #00ff00
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
+  color: white;
+  position: relative;
+  top: 25px;
+}
+
+#webname {
+  font-family: 'Audiowide', cursive;
+  background-color: black;
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  position: relative;
+  font-size: 60px;
+  color: white;
+  clear: both;
+  text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
+}
+
+body {
+  background-color: black;
+}
+
+#form_text {
+  color: white;
+  line-height: 2;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  margin-left: 20%;
+}
+
+#caesar, #vigenere {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 0px;
+  border-bottom: double;
+  border-right: double;
+  border-top: double;
+  border-color: #00ff00;
+  padding-right: 80px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+#ciphers {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: 0px;
+  padding-right: 80px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  text-shadow: 0 0 20px #ffff4d, 0 0 20px #ffff4d;
+}
+
+#caesar, #vigenere {
+  color: #00ff00;
+  background-color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  /*margin-left: 20%;*/
+  margin-right: auto;
+  text-shadow: 0 0 20px #ffffff;
+  position: relative;
+}
+
+#description {
+  margin-left: 20%;
+  margin-right: auto;
+  position: absolute;
+  top: 200px;
+  text-align: center;
+  left: 150px;
+}
+
+textarea {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  left: 350px;
+}
+
+button {
+  border: none;
+}
+#vigenere:hover {
+  text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
+}
+
+#caesar:hover {
+  text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
+}
+
+#number {
+  position: relative;
+}
+
+textarea {
+  position: relative;
 }
