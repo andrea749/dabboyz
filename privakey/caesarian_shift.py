@@ -15,24 +15,27 @@ def caesar_encryptor(message,shift):
     encryptedmessage = ''
     length = len(message)
 
-
     #We use a for loop using in range rather than just by term because it makes the if statement work.
     #This for loop runs letter by letter through the input message to decrypt.
     for i in range(0,length):
         #letter is the current letter in the input message
         letter = message[i]
+        letterlower = letter.lower()
         #in order to account for spaces, we check to see if the current letter is a letter, char is each letter in alphabet
-        if any(char == letter for char in Alphabet):
+        if any(char == letterlower for char in Alphabet):
             #if the current letter is a letter, we use this for loop to identify which letter it is
-            for j in range (0,25):
-                if Alphabet[j] == letter:
+            for j in range (0,26):
+                if Alphabet[j] == letterlower:
                     #We get the position of the current letter then apply the shift
                     #to get the decrypted letter, appending ti to decrypted.
                     position = j
                     positionnew = position + shift
                     if positionnew > 25:
                         positionnew = positionnew - 26
-                    encrypted.append(Alphabet[positionnew])
+                    if letter == letterlower:
+                        encrypted.append(Alphabet[positionnew])
+                    else:
+                        encrypted.append(Alphabet[positionnew].upper())
         else:
             #If the current letter is not a letter, we don't run an encryption and simply append the letter.
             encrypted.append(letter)
@@ -57,24 +60,27 @@ def caesar_decryptor(message,shift):
     decryptedmessage = ''
     length = len(message)
 
-
     #We use a for loop using in range rather than just by term because it makes the if statement work.
     #This for loop runs letter by letter through the input message to decrypt.
     for i in range(0,length):
         #letter is the current letter in the input message
         letter = message[i]
+        letterlower = letter.lower()
         #in order to account for spaces, we check to see if the current letter is a letter, char is each letter in alphabet
-        if any(char == letter for char in Alphabet):
+        if any(char == letterlower for char in Alphabet):
             #if the current letter is a letter, we use this for loop to identify which letter it is
-            for j in range (0,25):
-                if Alphabet[j] == letter:
+            for j in range (0,26):
+                if Alphabet[j] == letterlower:
                     #We get the position of the current letter then apply the shift
                     #to get the decrypted letter, appending ti to decrypted.
                     position = j
                     positionnew = position - shift
                     if positionnew < 0:
                         positionnew = positionnew + 26
-                    decrypted.append(Alphabet[positionnew])
+                    if letter == letterlower:
+                        decrypted.append(Alphabet[positionnew])
+                    else:
+                        decrypted.append(Alphabet[positionnew].upper())
         else:
             #If the current letter is not a letter, we don't run an encryption and simply append the letter.
             decrypted.append(letter)
