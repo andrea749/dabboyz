@@ -17,13 +17,13 @@ canvas {display: block;}
 .button {
   background-color: black;
   color: #0F0;
-  padding: 40px 200px;
+  padding: 40px 230px;
   text-align: center;
   display: block;
   font-size: 25px;
   cursor: pointer;
   border: 7px solid #0F0;
-  border-radius: 15px
+  border-radius: 15px;
 
 
 }

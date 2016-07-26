@@ -2,21 +2,25 @@
 <html>
 <title>Vigenere Cipher</title>
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="../static/cycle.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <form action = ''>
+    <button id = 'webname' type = 'Submit'>Privakey</button>
+  </form>
   <h1>Vigenere Cipher</h1>
-  <p id = 'sidebar'>Ciphers <br>
-    <form action = 'caesar'>
-    <button id = 'caesar' type = 'Submit'>
-      Caesar</button>
-  </form>
-  <form action = 'cycle'>
-    <button id = 'vigenere' type = 'Submit'>
-      Vigenere</button>
-  </form>
-  </p>
+    <p id = 'ciphers'>Ciphers</p>
+      <p><form action = 'caesar'>
+      <button id = 'caesar' type = 'Submit'>
+        Caesar</button>
+    </form>
+    <form action = 'cycle'>
+      <button id = 'vigenere' type = 'Submit'>
+        Vigenere</button>
+    </form>
+    </p>
     <p id = 'description'>
       The Vigenere cipher is similar to the classic Caesarian shift but allows for multiple values of offset. The image
       below shows what each shift would look like.<br>
@@ -30,7 +34,7 @@
       3 places ahead. So, with a keyword "abc", "dadboyz" becomes "ecgcqb".
     </p>
     <form method = 'post' id = 'form_text'>
-      What will your code word be?<textarea name = 'code_word' rows = '1'>{{code_word}}</textarea>
+      What will your code word be? &nbsp <textarea name = 'code_word' rows = '1'>{{code_word}}</textarea>
       <br>
 
       <!-- What will the first shift be? (Max 25) <input type = 'number' name = 'shift1' min = '1' max = '25'>
