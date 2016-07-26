@@ -1,9 +1,14 @@
+body {
+  background-color: black;
+}
+
 p {
   font-family: 'Source Sans Pro', sans-serif;
   color: #00ff00
 }
 
 h1 {
+  top: 30px;
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
@@ -11,19 +16,18 @@ h1 {
 }
 
 #webname {
+  top: 30px;
+  right: 105px;
+  text-align: center;
   font-family: 'Audiowide', cursive;
   background-color: black;
   display: block;
   width: 20%;
   margin: 0 auto;
   position: relative;
-  font-size: 60px;
+  font-size: 80px;
   color: white;
   text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
-}
-
-body {
-  background-color: black;
 }
 
 #form_text {
@@ -45,8 +49,8 @@ body {
   border-top: double;
   border-color: #00ff00;
   padding-right: 80px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom:5px;
   padding-left: 0px;
 }
 #ciphers {
@@ -74,6 +78,7 @@ body {
 
 #description {
   margin-left: 20%;
+  right: 1%;
   margin-right: auto;
   position: relative;
   bottom: 100px;
@@ -92,6 +97,17 @@ button {
 
 #caesar:hover {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
+}
+
+#image {
+  left: 90px;
+  text-align: center;
+}
+
+
+#form_text {
+  bottom: 100px;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
