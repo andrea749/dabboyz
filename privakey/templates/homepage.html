@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="static/home.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <title>
@@ -11,12 +11,14 @@
   <body>
     <p id = 'top'>Privakey</p>
     <p id = 'sidebar'>Ciphers <br>
-      <a id = 'caesar' href="http://www.braingle.com/brainteasers/codes/caesar.php">
-        Caesar<br>
-      </a>
-      <a id = 'keyword' href='http://www.braingle.com/brainteasers/codes/keyword.php'>
-        Keyword<br>
-      </a>
+      <form action = 'caesar'>
+      <button id = 'caesar' type = 'Submit'>
+        Caesar</button>
+    </form>
+    <form action = 'cycle'>
+      <button id = 'vigenere' type = 'Submit'>
+        Vigenere</button>
+    </form>
     </p>
   <div id="container3">
     <div id="container2">

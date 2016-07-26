@@ -8,32 +8,32 @@
 <body>
   <h1>Vigenere Cipher</h1>
   <p id = 'sidebar'>Ciphers <br>
-    <a id = 'caesar' href="http://www.braingle.com/brainteasers/codes/caesar.php">
-      Caesar<br>
-    </a>
-    <a id = 'keyword' href='http://www.braingle.com/brainteasers/codes/keyword.php'>
-      Keyword<br>
-    </a>
+    <form action = 'caesar'>
+    <button id = 'caesar' type = 'Submit'>
+      Caesar</button>
+  </form>
+  <form action = 'cycle'>
+    <button id = 'vigenere' type = 'Submit'>
+      Vigenere</button>
+  </form>
   </p>
     <p id = 'description'>
       The Vigenere cipher is similar to the classic Caesarian shift but allows for multiple values of offset. The image
       below shows what each shift would look like.<br>
       <image src = '../static/caesarshift2.jpg' width = '475' height = '200' alt = "Caesar cipher wheel">
         <br>
-      For example, a cycle of length 3 allows 3 different
-      offsets. If one were to choose 1, 2, and 3 as their offsets, then the
-      first letter would be replaced with the next letter in the alphabet. Then, the
-      second letter would be replaced with the letter that is two positions
-      higher in the alphabet, the third letter would be replaced with the
-      letter that is 3 positions higher and the cycle repeats.
-      Using this cycle and these shifts, the word "cereal" would then become
-      "dgufco".
+      The offsets are determined by a keyword chosen by the user. For example,
+      if the keyword is "abc" then the set of offsets would be 1,2,3 and every
+      third letter would be replaced by the next letter in the alphabet, every
+      letter after those would be replaced by the letter 2 places above in the
+      alphabet, and every letter after that would be replaced by the letter
+      3 places ahead. So, with a keyword "abc", "dadboyz" becomes "ecgcqb".
     </p>
     <form method = 'post' id = 'form_text'>
-      How long would you like your cycle to be? (Max 10)<input type = 'number' name = 'cycle_size' min = '1' max = '10'>
+      What will your code word be?<textarea name = 'code_word' rows = '1'>{{code_word}}</textarea>
       <br>
 
-      What will the first shift be? (Max 25) <input type = 'number' name = 'shift1' min = '1' max = '25'>
+      <!-- What will the first shift be? (Max 25) <input type = 'number' name = 'shift1' min = '1' max = '25'>
       <br>
       What will the second shift be? (Max 25) <input type = 'number' name = 'shift2' min = '1' max = '25'>
       <br>
@@ -52,7 +52,7 @@
       What will the ninth shift be? (Max 25) <input type = 'number' name = 'shift9' min = '1' max = '25'>
       <br>
       What will the tenth shift be? (Max 25) <input type = 'number' name = 'shift10' min = '1' max = '25'>
-      <br>
+      <br> -->
 
       Insert message to encrypt: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Insert message to decrypt: <br>
       <textarea rows='4' cols='50' name='normal_message'>{{decryptedmessage}}</textarea>

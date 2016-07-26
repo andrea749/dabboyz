@@ -35,7 +35,7 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(template.render())
 
     def post(self):
-        template = jinja_environment.get_template('welcomepage.html')
+        template = jinja_environment.get_template('homepage.html')
         self.response.write(template.render())
 
 class CycleHandler(webapp2.RequestHandler):
@@ -53,31 +53,25 @@ class CycleHandler(webapp2.RequestHandler):
         if decision == 'Decrypt':
             encryptedmessage = self.request.get('encrypted_message')
             decryptedmessage = self.Decryptor(encryptedmessage)
+        code_word = self.request.get('code_word')
 
         variables = {
         'encryptedmessage':encryptedmessage,
-        'decryptedmessage':decryptedmessage
+        'decryptedmessage':decryptedmessage,
+        'code_word':code_word
         }
         self.response.write(template.render(variables))
 
     def Encryptor(self, message):
         decryptedmessage = message
-        cycle_size = int(self.request.get('cycle_size'))
-        shifts = []
-        for i in range(1, cycle_size + 1):
-            shift = int(self.request.get('shift%s' % (i)))
-            shifts.append(shift)
-        answer = encryptor(decryptedmessage, cycle_size, shifts)
+        code_word = str(self.request.get('code_word'))
+        answer = encryptor(decryptedmessage, code_word)
         return answer
 
     def Decryptor(self, message):
         encryptedmessage = message
-        cycle_size = int(self.request.get('cycle_size'))
-        shifts = []
-        for i in range(1, cycle_size + 1):
-            shift = int(self.request.get('shift%s' % (i)))
-            shifts.append(shift)
-        answer = decryptor(encryptedmessage, cycle_size, shifts)
+        code_word = str(self.request.get('code_word'))
+        answer = decryptor(encryptedmessage, code_word)
         return answer
 
 

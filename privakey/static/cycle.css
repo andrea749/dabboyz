@@ -32,14 +32,15 @@ body {
   border-color: #00ff00;
   padding-right: 100px;
   padding-top: 5px;
-  padding-bottom: 300px;
+  padding-bottom: 30px;
   padding-left: 0px;
 }
-#caesar, #keyword {
+#caesar, #vigenere {
   color: #00ff00;
+  background-color: black;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
-  margin-left: 20%;
+  /*margin-left: 20%;*/
   margin-right: auto;
   text-shadow: 0 0 20px #ffffff;
   position: relative;
