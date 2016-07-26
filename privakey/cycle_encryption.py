@@ -3,7 +3,7 @@
 
 import math
 
-def encryptor(message, code_word):
+def cycle_encryptor(message, code_word):
     Alphabet = (
     ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s',
     't','u','v','w','x','y','z']
@@ -89,7 +89,7 @@ def encryptor(message, code_word):
 
 
 
-def decryptor(message, code_word):
+def cycle_decryptor(message, code_word):
     Alphabet = (
     ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s',
     't','u','v','w','x','y','z']
