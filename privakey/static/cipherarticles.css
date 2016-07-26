@@ -7,17 +7,6 @@
   top: 50px;
 }
 
-#top {
-  font-family: 'Audiowide', cursive;
-  clear: both;
-  text-align: center;
-  font-size: 50px;
-  color: #ffffff;
-  text-shadow: 0 0 20px #ff1a1a, 0 0 20px #ff1a1a, 0 0 20px #ff1a1a, 0 0 20px #ff1a1a, 0 0 20px #ff1a1a;
-}
-
-
-
 body {
   background-color: #000000
 }
