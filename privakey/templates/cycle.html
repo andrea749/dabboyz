@@ -2,26 +2,35 @@
 <html>
 <title>Vigenere Cipher</title>
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="../static/cycle.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <form action = ''>
+    <button id = 'webname' type = 'Submit'>Privakey</button>
+  </form>
   <h1>Vigenere Cipher</h1>
-  <p id = 'sidebar'>Ciphers <br>
-    <form action = 'caesar'>
-    <button id = 'caesar' type = 'Submit'>
-      Caesar</button>
-  </form>
-  <form action = 'cycle'>
-    <button id = 'vigenere' type = 'Submit'>
-      Vigenere</button>
-  </form>
-  </p>
+  <p id = 'ciphers'>Ciphers</p>
+  <p><form action = 'caesar'>
+  <button id = 'caesar' type = 'Submit'>
+        Caesar</button>
+    </form>
+    <form action = 'cycle'>
+      <button id = 'vigenere' type = 'Submit'>
+        Vigenere</button>
+    </form>
+    </p>
     <p id = 'description'>
       The Vigenere cipher is similar to the classic Caesarian shift but allows for multiple values of offset. The image
-      below shows what each shift would look like.<br>
-      <image src = '../static/caesarshift2.jpg' width = '475' height = '200' alt = "Caesar cipher wheel">
-        <br>
+      below shows what each shift would look like.
+      <br>
+      <br>
+      <br>
+      <image id ="image" src = '../static/caesarshift2.jpg' width = '475' height = '200' alt = "Caesar cipher wheel">
+      <br>
+      <br>
+      <br>
       The offsets are determined by a keyword chosen by the user. For example,
       if the keyword is "abc" then the set of offsets would be 1,2,3 and every
       third letter would be replaced by the next letter in the alphabet, every
@@ -30,7 +39,7 @@
       3 places ahead. So, with a keyword "abc", "dadboyz" becomes "ecgcqb".
     </p>
     <form method = 'post' id = 'form_text'>
-      What will your code word be?<textarea name = 'code_word' rows = '1'>{{code_word}}</textarea>
+      What will your code word be? &nbsp <textarea name = 'code_word' rows = '1'>{{code_word}}</textarea>
       <br>
 
       <!-- What will the first shift be? (Max 25) <input type = 'number' name = 'shift1' min = '1' max = '25'>
@@ -55,9 +64,9 @@
       <br> -->
 
       Insert message to encrypt: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Insert message to decrypt: <br>
-      <textarea rows='4' cols='50' name='normal_message'>{{decryptedmessage}}</textarea>
+      <textarea rows='10' cols='50' name='normal_message'>{{decryptedmessage}}</textarea>
       <input type = 'submit' value = 'Encrypt' name = 'submitted'>
-      <textarea rows='4' cols='50' name='encrypted_message'>{{encryptedmessage}}</textarea>
+      <textarea rows='10' cols='50' name='encrypted_message'>{{encryptedmessage}}</textarea>
       <input type = 'submit' value = 'Decrypt' name = 'submitted'>
     </form>
 

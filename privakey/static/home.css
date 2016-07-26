@@ -73,7 +73,6 @@
   padding-right: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
-
   text align: center;
 }
 #statement {
@@ -115,12 +114,96 @@ body {
   background-color: #000000
 }
 
-.inline {
-
-  display: inline-block;
-
-
+h1 {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
+  color: white;
 }
+
+#webname {
+  font-family: 'Audiowide', cursive;
+  background-color: black;
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  position: relative;
+  font-size: 60px;
+  color: white;
+  text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
+}
+
+
+
+/*<<<<<<< HEAD*/
+
+#form_text {
+  color: white;
+  line-height: 2;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  margin-left: 20%;
+}
+
+#caesar, #vigenere {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  border-bottom: double;
+  border-right: double;
+  border-top: double;
+  border-color: #00ff00;
+  padding-right: 80px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+#ciphers {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: 0px;
+  padding-right: 80px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  text-shadow: 0 0 20px #ffff4d, 0 0 20px #ffff4d;
+}
+
+#caesar, #vigenere {
+  color: #00ff00;
+  background-color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  /*margin-left: 20%;*/
+  margin-right: auto;
+  text-shadow: 0 0 20px #ffffff;
+  position: relative;
+}
+
+#description {
+  margin-left: 20%;
+  margin-right: auto;
+  position: relative;
+  bottom: 100px;
+}
+
+textarea {
+  display: inline-block;
+}
+
+button {
+  border: none;
+}
+#vigenere:hover {
+  text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
+}
+
+#caesar:hover {
+  text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
+/*======================*/
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

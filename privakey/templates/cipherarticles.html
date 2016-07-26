@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <!-- while this can be used as a template for all cipher articles,
-this file is for the Caesar cipher artical -->
+this file is for the Caesar cipher article -->
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="static/cipherarticles.css">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../static/cipherarticles.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
   </head>
   <body>
-    <p id = 'top'>Privakey</p>
-    <p id = 'sidebar'>Ciphers <br>
+    <form action = ''>
+      <button id = 'webname' type = 'Submit'>Privakey</button>
+    </form>
+    <h1>Caesar Cipher</h1>
+      <p id = 'ciphers'>Ciphers</p>
+        <p><form action = 'caesar'>
+        <button id = 'caesar' type = 'Submit'>
+          Caesar</button>
+      </form>
+      <form action = 'cycle'>
+        <button id = 'vigenere' type = 'Submit'>
+          Vigenere</button>
+      </form>
+      </p>
+    <!-- <p id = 'sidebar'>Ciphers <br>
       <form action = 'caesar'>
       <button id = 'caesar' type = 'Submit'>
         Caesar</button>
@@ -20,18 +34,19 @@ this file is for the Caesar cipher artical -->
         Vigenere</button>
     </form>
     </p>
-    <p id = 'name_of_cipher'>Caesar Cipher</p>
+<<<<<<< HEAD
+    <p id = 'name_of_cipher'>Caesar</p> -->
     <p id = 'description'>The Caesar cipher is a classic cipher. The Caesar
       cipher, also known as a rotation cipher, essentially involves shifting
       the alphabet by a certain number. So in a Caesar cipher of 1, 'a'
       becomes 'b', 'b becomes c, and so on with 'z' becoming 'a'. So in a Caesar
       cipher of 1, 'dadboyz' becomes 'ebecpza'<p>
     <form method = 'post'>
-      <input type = 'number' name = 'shift' min = '1' max = '26'>
+      <input id = 'number' type = 'number' name = 'shift' min = '1' max = '26'>
       <textarea id = 'encrypt' name = 'normal_message'>{{decryptedmessage}}</textarea>
-      <button id = 'button' type="submit" name = 'submitted' value = 'Encrypt'>Encrypt</button>
+      <button id = 'crypt' type="submit" name = 'submitted' value = 'Encrypt'>Encrypt</button>
       <textarea id = 'decrypt' name = 'encrypted_message'>{{encryptedmessage}}</textarea>
-      <button id = 'button' type="submit" name = 'submitted' value = 'Decrypt'>Decrypt</button>
+      <button id = 'crypt' type="submit" name = 'submitted' value = 'Decrypt'>Decrypt</button>
   </form>
   </body>
 </html>
