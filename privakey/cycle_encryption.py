@@ -3,7 +3,7 @@
 
 import math
 
-def encryptor(message, code_word):
+def cycle_encryptor(message, code_word):
     Alphabet = (
     ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s',
     't','u','v','w','x','y','z']
@@ -46,18 +46,23 @@ def encryptor(message, code_word):
             #letterpos.
             letterpos = currentshift + currentcycle * len(shifts)
             letter = message[letterpos]
+            letterlower = letter.lower()
             #This is the same as the caesarian_shift code.
-            if any(char == letter for char in Alphabet):
+            if any(char == letterlower for char in Alphabet):
                 #if the current letter is a letter, we use this for loop to identify which letter it is
-                for j in range (0,25):
-                    if Alphabet[j] == letter:
+                for j in range (0,26):
+                    if Alphabet[j] == letterlower:
                         #We get the position of the current letter then apply the shift
                         #to get the decrypted letter, appending it to decrypted.
                         position = j
                         positionnew = position + shifts[currentshift]
                         if positionnew > 25:
                             positionnew = positionnew - 26
-                        encrypted.append(Alphabet[positionnew])
+                        if letter == letterlower:
+                            encrypted.append(Alphabet[positionnew])
+                        else:
+                            encrypted.append(Alphabet[positionnew].upper())
+
             else:
                 #If the current letter is not a letter, we don't run an encryption and simply append the letter.
                 encrypted.append(letter)
@@ -67,17 +72,21 @@ def encryptor(message, code_word):
     for ii in range (0, remain):
         letterpos = len(shifts) * cycle_number + ii
         letter = message[letterpos]
-        if any(char == letter for char in Alphabet):
+        letterlower = letter.lower()
+        if any(char == letterlower for char in Alphabet):
             #if the current letter is a letter, we use this for loop to identify which letter it is
-            for j in range (0,25):
-                if Alphabet[j] == letter:
+            for j in range (0,26):
+                if Alphabet[j] == letterlower:
                     #We get the position of the current letter then apply the shift
                     #to get the decrypted letter, appending ti to decrypted.
                     position = j
                     positionnew = position + shifts[ii]
                     if positionnew > 25:
                         positionnew = positionnew - 26
-                    encrypted.append(Alphabet[positionnew])
+                    if letter == letterlower:
+                        encrypted.append(Alphabet[positionnew])
+                    else:
+                        encrypted.append(Alphabet[positionnew].upper())
         else:
             #If the current letter is not a letter, we don't run an encryption and simply append the letter.
             encrypted.append(letter)
@@ -89,7 +98,7 @@ def encryptor(message, code_word):
 
 
 
-def decryptor(message, code_word):
+def cycle_decryptor(message, code_word):
     Alphabet = (
     ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s',
     't','u','v','w','x','y','z']
@@ -115,6 +124,7 @@ def decryptor(message, code_word):
         shift = Alphashift[letter]
         shifts.append(shift)
 
+
     #cycle_number is the number of full cycles required to run through the message.
     #We floor it to make sure we don't exceed index.
     cycle_number = int(math.floor(length / cycle_size))
@@ -134,18 +144,22 @@ def decryptor(message, code_word):
             #letterpos.
             letterpos = currentshift + currentcycle * len(shifts)
             letter = message[letterpos]
+            letterlower = letter.lower()
             #This is the same as the caesarian_shift code.
-            if any(char == letter for char in Alphabet):
+            if any(char == letterlower for char in Alphabet):
                 #if the current letter is a letter, we use this for loop to identify which letter it is
-                for j in range (0,25):
-                    if Alphabet[j] == letter:
+                for j in range (0,26):
+                    if Alphabet[j] == letterlower:
                         #We get the position of the current letter then apply the shift
                         #to get the decrypted letter, appending it to decrypted.
                         position = j
                         positionnew = position - shifts[currentshift]
                         if positionnew < 0:
                             positionnew = positionnew + 26
-                        decrypted.append(Alphabet[positionnew])
+                        if letterlower == letter:
+                            decrypted.append(Alphabet[positionnew])
+                        else:
+                            decrypted.append(Alphabet[positionnew].upper())
             else:
                 #If the current letter is not a letter, we don't run an encryption and simply append the letter.
                 decrypted.append(letter)
@@ -155,17 +169,21 @@ def decryptor(message, code_word):
     for ii in range (0, remain):
         letterpos = len(shifts) * cycle_number + ii
         letter = message[letterpos]
-        if any(char == letter for char in Alphabet):
+        letterlower = letter.lower()
+        if any(char == letterlower for char in Alphabet):
             #if the current letter is a letter, we use this for loop to identify which letter it is
-            for j in range (0,25):
-                if Alphabet[j] == letter:
+            for j in range (0,26):
+                if Alphabet[j] == letterlower:
                     #We get the position of the current letter then apply the shift
                     #to get the decrypted letter, appending ti to decrypted.
                     position = j
                     positionnew = position - shifts[ii]
                     if positionnew < 0:
                         positionnew = positionnew + 26
-                    decrypted.append(Alphabet[positionnew])
+                    if letter == letterlower:
+                        decrypted.append(Alphabet[positionnew])
+                    else:
+                        decrypted.append(Alphabet[positionnew].upper())
         else:
             #If the current letter is not a letter, we don't run an encryption and simply append the letter.
             decrypted.append(letter)
