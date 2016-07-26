@@ -94,18 +94,25 @@ class CaesarHandler(webapp2.RequestHandler):
             encryptedmessage = self.request.get('encrypted_message')
             decryptedmessage = self.Decryptor(encryptedmessage)
 
-        self.response.write('Decrypt: %s ' % (decryptedmessage))
-        self.response.write('Encrypt: %s' % (encryptedmessage))
+        shift = int(self.request.get('shift'))
+        variables = {
+        'shift':shift,
+        'encryptedmessage':encryptedmessage,
+        'decryptedmessage':decryptedmessage
+        }
+        self.response.write(template.render(variables))
 
     def Encryptor(self, message):
         decryptedmessage = message
         shift = int(self.request.get('shift'))
         answer = encryptor(message,shift)
+        return answer
 
     def Decryptor(self, message):
         encryptedmessage = message
         shift = int(self.request.get('shift'))
         answer = decryptor(message,shift)
+        return answer
 
 
 
