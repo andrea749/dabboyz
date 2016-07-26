@@ -21,6 +21,9 @@ import os
 import math
 from cycle_encryption import encryptor
 from cycle_encryption import decryptor
+from caesarian_shift import encryptor
+from caesarian_shift import decryptor
+
 
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
@@ -79,6 +82,32 @@ class CaesarHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('cipherarticles.html')
         self.response.write(template.render())
+
+    def post(self):
+        template = jinja_environment.get_template('cipherarticles.html')
+        decision = self.request.get('submitted')
+        if decision == 'Encrypt':
+            decryptedmessage = self.request.get('normal_message')
+            encryptedmessage = self.Encryptor(decryptedmessage)
+
+        if decision == 'Decrypt':
+            encryptedmessage = self.request.get('encrypted_message')
+            decryptedmessage = self.Decryptor(encryptedmessage)
+
+        self.response.write('Decrypt: %s ' % (decryptedmessage))
+        self.response.write('Encrypt: %s' % (encryptedmessage))
+
+    def Encryptor(self, message):
+        decryptedmessage = message
+        shift = int(self.request.get('shift'))
+        answer = encryptor(message,shift)
+
+    def Decryptor(self, message):
+        encryptedmessage = message
+        shift = int(self.request.get('shift'))
+        answer = decryptor(message,shift)
+
+
 
 
 app = webapp2.WSGIApplication([

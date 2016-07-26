@@ -1,0 +1,77 @@
+#top {
+  text-align: center;
+  font-size: 50px;
+  color: #ffffff;
+  text-shadow: 0 0 20px #ff1a1a, 0 0 20px #ff1a1a, 0 0 20px #ff1a1a, 0 0 20px #ff1a1a, 0 0 20px #ff1a1a;
+}
+#sidebar {
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  border-bottom: double;
+  border-right: double;
+  border-top: double;
+  border-color: #00ff00;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+}
+#caesar, #vigenere {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 20px #ffffff;
+  position: relative;
+}
+p {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 20px #ffffff;
+}
+
+body {
+  background-color: #000000
+}
+
+#name_of_cipher {
+  text-align: center;
+  font-size: 50px;
+  color: #ffffff;
+  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
+  position: relative;
+  bottom: 250px;
+}
+
+#description {
+  margin-left: 20%;
+  margin-right: auto;
+  position: relative;
+  bottom: 275px;
+}
+
+button {
+  position: relative;
+  left: 400px;
+  bottom: 200px;
+}
+
+textarea {
+  position: relative;
+  width: 300px;
+  height: 75px;
+  left: 400px;
+  bottom: 200px;
+}
+
+button {
+  position: relative;
+  left: 20px;
+  top: 40px;
+  background-color: black;
+}
