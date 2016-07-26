@@ -1,7 +1,7 @@
 
 #top {
   text-align: center;
-  font-size: 50px;
+  font-size: 100px;
   color: #00ff00;
   text-shadow: 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white;
   border-bottom-style: solid;
@@ -14,13 +14,12 @@
   display: inline-block;
   position: relative;
   top: 10px;
-  left: 20px;
-  border-style: double;
+  left: 0px;
   border-color: #00ff00;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 20px;
+
 }
 #caesar, #vigenere {
   color: #00ff00;
@@ -33,12 +32,13 @@
   text-shadow: 0 0 20px #ffffff;
   position: relative;
   padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  left: 43px;
-
-
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  left: 0px;
+  height:22px
+  border: double;
+  border-color: #00ff00;
 
 }
 #container1 {
@@ -63,7 +63,7 @@
 #statement, #history, #details {
   color: #00ff00;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
+  font-size: 30px;
   margin-left: auto;
   margin-right: auto;
   border-color: #00ff00;
@@ -98,8 +98,9 @@
   overflow: hidden;
 }
 #statement_title, #history_title, #details_title {
-  font-size: 20px;
+  font-size: 50px;
   padding-bottom: 0px;
+  text-align: center;
 }
 p {
   color: #00ff00;
@@ -112,6 +113,13 @@ p {
 
 body {
   background-color: #000000
+}
+
+.inline {
+
+  display: inline-block;
+
+
 }
 
 /* Smartphones (portrait and landscape) ----------- */
