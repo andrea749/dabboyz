@@ -13,9 +13,9 @@
     <button id = 'webname' type = 'Submit'>Privakey</button>
   </form>
   <h1>Vigenere Cipher</h1>
-    <p id = 'ciphers'>Ciphers</p>
-      <p><form action = 'caesar'>
-      <button id = 'caesar' type = 'Submit'>
+  <p id = 'ciphers'>Ciphers</p>
+  <p><form action = 'caesar'>
+  <button id = 'caesar' type = 'Submit'>
         Caesar</button>
     </form>
     <form action = 'cycle'>
@@ -25,9 +25,14 @@
     </p>
     <p id = 'description'>
       The Vigenere cipher is similar to the classic Caesarian shift but allows for multiple values of offset. The image
-      below shows what each shift would look like.<br>
-      <image src = '../static/caesarshift2.jpg' width = '475' height = '200' alt = "Caesar cipher wheel">
-        <br>
+      below shows what each shift would look like.
+      <br>
+      <br>
+      <br>
+      <image id ="image" src = '../static/caesarshift2.jpg' width = '475' height = '200' alt = "Caesar cipher wheel">
+      <br>
+      <br>
+      <br>
       The offsets are determined by a keyword chosen by the user. For example,
       if the keyword is "abc" then the set of offsets would be 1,2,3 and every
       third letter would be replaced by the next letter in the alphabet, every
@@ -61,9 +66,9 @@
       <br> -->
 
       Insert message to encrypt: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Insert message to decrypt: <br>
-      <textarea rows='4' cols='50' name='normal_message'>{{decryptedmessage}}</textarea>
+      <textarea rows='10' cols='50' name='normal_message'>{{decryptedmessage}}</textarea>
       <input type = 'submit' value = 'Encrypt' name = 'submitted'>
-      <textarea rows='4' cols='50' name='encrypted_message'>{{encryptedmessage}}</textarea>
+      <textarea rows='10' cols='50' name='encrypted_message'>{{encryptedmessage}}</textarea>
       <input type = 'submit' value = 'Decrypt' name = 'submitted'>
     </form>
 

@@ -23,6 +23,11 @@ from cycle_encryption import cycle_encryptor
 from cycle_encryption import cycle_decryptor
 from caesarian_shift import caesar_encryptor
 from caesarian_shift import caesar_decryptor
+from copy import copy
+from trifid import find
+from trifid import trifid_encryptor
+from trifid import trifid_decryptor
+
 
 
 
@@ -128,11 +133,43 @@ class CaesarHandler(webapp2.RequestHandler):
         answer = caesar_decryptor(message,shift)
         return answer
 
+class TrifidHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('trifid.html')
+        self.response.write(template.render())
+
+    def post(self):
+        template = jinja_environment.get_template('trifid.html')
+        decision = self.request.get('submitted')
+
+        if decision == 'Encrypt':
+            decryptedmessage = self.request.get('normal_message')
+            encryptedmessage = self.Encryptor(decryptedmessage)
+
+        if decision == 'Decrypt':
+            encryptedmessage = self.request.get('encrypted_message')
+            decryptedmessage = self.Decryptor(encryptedmessage)
+
+        variables = {
+        'encryptedmessage':encryptedmessage,
+        'decryptedmessage':decryptedmessage
+        }
+        self.response.write(template.render(variables))
+
+    def Encryptor(self, message):
+        answer = trifid_encryptor(message)
+        return answer
+
+    def Decryptor(self,message):
+        answer = trifid_decryptor(message)
+        return answer
+
 
 
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/cycle', CycleHandler),
-    ('/caesar', CaesarHandler)
+    ('/caesar', CaesarHandler),
+    ('/trifid', TrifidHandler)
 ], debug=True)
