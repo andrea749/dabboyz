@@ -4,7 +4,7 @@
   <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
   <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
   <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="../static/home.css">
+  <link rel="stylesheet" type="text/css" href="../static/trifid.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 </head>
   <title>Trifid</title>
@@ -24,15 +24,12 @@
       <button id = 'trifid' type = 'Submit'>Trifid</button>
     </form>
    </p>
-    <h1>Trifid Cipher</h1>
-      <p>The Trifid cipher is based on a 3x3x3 cube. It works by assigning each letter of the alphabet three coordinates: layer, column, and row. It then takes these coordinates, prints them vertically, and then translates them horizontally. For example, the coordinates for 'dadboyz' would be:
-        <br>
-        <br>
+    <h1 id = 'name_of_cipher'>Trifid Cipher</h1>
+      <p id = 'description'>The Trifid cipher is based on a 3x3x3 cube. It works by assigning each letter of the alphabet three coordinates: layer, column, and row. It then takes these coordinates, prints them vertically, and then translates them horizontally. For example, the coordinates for 'dadboyz' would be:
         <br>
         <image id ="image" src = '../static/trifid.jpg' width = '212' height = '174' alt = "Trifid coordinates">
         <br>
-        <br>
-        <br>
+        It then codes the words by reading the rows instead of columns. That way, the first two letters (111, 123) become 'ah' and 'dadboyz' becomes 'ahshebr'.
       </p>
       <form method = 'post'>
         Decrypted Message:
