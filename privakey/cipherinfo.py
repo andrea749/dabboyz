@@ -30,5 +30,13 @@ ciphers = {
         the alphabet by a certain number. So in a Caesar cipher of 1, 'a'\
         becomes 'b', 'b becomes c, and so on with 'z' becoming 'a'. So in a Caesar\
         cipher of 1, 'dadboyz' becomes 'ebecpza'."
+    },
+    'trifid':{
+    'name': 'Trifid',
+    'description':"The Trifid cipher is based on a 3x3x3 cube. It works by assigning each letter of the alphabet three coordinates: layer, column, and row. It then takes these coordinates, prints them vertically, and then translates them horizontally. For example, the coordinates for 'dadboyz' would be:\
+        <br>\
+        <image id ='image' src = '../static/trifid.jpg' width = '212' height = '174' alt = 'Trifid coordinates'>\
+        <br>\
+        It then codes the words by reading the rows instead of columns. That way, the first two letters (111, 123) become 'ah' and 'dadboyz' becomes 'ahshebr'."
     }
 }
