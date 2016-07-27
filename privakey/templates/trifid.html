@@ -24,20 +24,23 @@
       <button id = 'trifid' type = 'Submit'>Trifid</button>
     </form>
    </p>
-    <h1 id = 'name_of_cipher'>Trifid Cipher</h1>
-      <p id = 'description'>The Trifid cipher is based on a 3x3x3 cube. It works by assigning each letter of the alphabet three coordinates: layer, column, and row. It then takes these coordinates, prints them vertically, and then translates them horizontally. For example, the coordinates for 'dadboyz' would be:
-        <br>
-        <image id ="image" src = '../static/trifid.jpg' width = '212' height = '174' alt = "Trifid coordinates">
-        <br>
-        It then codes the words by reading the rows instead of columns. That way, the first two letters (111, 123) become 'ah' and 'dadboyz' becomes 'ahshebr'.
-      </p>
-      <form method = 'post'>
-        Decrypted Message:
-        <textarea id = 'encrypt' name = 'normal_message'>{{decryptedmessage}}</textarea>
-        <button id = 'button' type="submit" name = 'submitted' value = 'Encrypt'>Encrypt</button>
-        Encrypted Message:
-        <textarea id = 'decrypt' name = 'encrypted_message'>{{encryptedmessage}}</textarea>
-        <button id = 'button' type="submit" name = 'submitted' value = 'Decrypt'>Decrypt</button>
-    </form>
+    <h1 id = 'name_of_cipher'>{{ciphername}} Cipher</h1>
+      <p id = 'description'>{{cipherdescription}}</p>
+
+
+    <input type = 'text' name='fname' class='chatinput' id = 'encryptbox'>
+    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox'>
+
+    <div class='printchatbox' id='encryptedbox'></div>
+    <div class='printchatbox' id='decryptedbox'></div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" type="text/javascript" ></script>
+    <script src='static/trifid_live_encryptor.js'></script>
+
+
+
+
   </body>
 </html>

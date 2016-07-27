@@ -7,6 +7,10 @@
   top: 50px;
 }
 
+#description {
+  text-align: center;
+}
+
 body {
   background-color: #000000
 }
@@ -16,8 +20,6 @@ body {
   font-size: 50px;
   color: #ffffff;
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
-  position: relative;
-  bottom: 220px;
 }
 
 button {
@@ -38,6 +40,7 @@ button {
   position: relative;
   left: 0px;
   top: 40px;
+  background-color: black;
   border: none;
 }
 
@@ -80,13 +83,17 @@ h1 {
   font-family: 'Source Sans Pro', sans-serif;
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
   color: white;
-  position: relative;
-  top: 25px;
-  left: 50px;
+  float: none;
+}
+
+#name_of_cipher {
+  position: absolute;
+  top: 95px;
+  left: 600px;
 }
 
 #webname {
-  /*font-family: 'Audiowide', cursive;
+  font-family: 'Audiowide', cursive;
   background-color: black;
   display: block;
   width: 20%;
@@ -95,20 +102,6 @@ h1 {
   font-size: 60px;
   color: white;
   clear: both;
-  margin right: 380px;
-  margin-left: 380px;
-  text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;*/
-  top: 30px;
-  right: 600px;
-  text-align: center;
-  font-family: 'Audiowide', cursive;
-  background-color: black;
-  display: block;
-  margin right: 480px;
-  margin-left: 350px;
-  position: relative;
-  font-size: 80px;
-  color: white;
   text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
 }
 
@@ -185,14 +178,23 @@ button {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
 }
 
+#button {
+  color: white;
+  text-shadow: 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00;
+  background-color: black;
+  border: none;
+}
 
 #number {
   position: relative;
 }
 
-textarea {
+#encrypt, #decrypt {
   position: relative;
+  top: 275px;
+  left: 200px;
 }
+
 
 .printchatbox {border-width:thick 10px;border-style: solid;
     background-color:#fff;
@@ -202,6 +204,9 @@ textarea {
 }
 
 
+/*textarea {
+  position: relative;
+}*/
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

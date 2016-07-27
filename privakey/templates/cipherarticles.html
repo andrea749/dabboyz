@@ -9,7 +9,7 @@ this file is for the Caesar cipher article -->
     <meta charset="utf-8">
     <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
-    <title>Caesar Cipher</title>
+    <title>{{ciphername}} Cipher</title>
   </head>
   <body>
     <form action = '/' method = 'post'>
@@ -30,14 +30,7 @@ this file is for the Caesar cipher article -->
      </form>
       </p>
 
-    <p id = 'description'>{{cipherdescription}}<p>
-    <!-- <form method = 'post'>
-      <input id = 'number' type = 'number' name = 'shift' min = '1' max = '26'>
-      <textarea id = 'encrypt' name = 'normal_message'>{{decryptedmessage}}</textarea>
-      <button id = 'crypt' type="submit" name = 'submitted' value = 'Encrypt'>Encrypt</button>
-      <textarea id = 'decrypt' name = 'encrypted_message'>{{encryptedmessage}}</textarea>
-      <button id = 'crypt' type="submit" name = 'submitted' value = 'Decrypt'>Decrypt</button>
-  </form> -->
+    <p id = 'description'>{{cipherdescription}}<p><br>
 
       <input id = 'shift' type = 'number' name = 'shift' min = '1' max = '26'>
 
