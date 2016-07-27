@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../static/home.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+</head>
   <title>Trifid</title>
-
   <body>
+    <form action = ''>
+      <button id = 'webname' type = 'Submit'>Privakey</button>
+    </form>
+    <p id = 'ciphers'>Ciphers</p>
+    <p>
+      <form action = 'caesar'>
+        <button id = 'caesar' type = 'Submit'>Caesar</button>
+      </form>
+      <form action = 'cycle'>
+       <button id = 'vigenere' type = 'Submit'>Vigenere</button>
+     </form>
+     <form action = 'trifid'>
+      <button id = 'trifid' type = 'Submit'>Trifid</button>
+    </form>
+   </p>
     <h1>Trifid Cipher</h1>
-      <p> binaryiscoolbinaryiscoolbinaryiscoolbinaryiscool </p>
-
+      <p>The Trifid cipher is based on a 3x3x3 cube. It works by assigning each letter of the alphabet three coordinates: layer, column, and row. It then takes these coordinates, prints them vertically, and then translates them horizontally. For example, the coordinates for 'dadboyz' would be:
+        <br>
+        <br>
+        <br>
+        <image id ="image" src = '../static/trifid.jpg' width = '212' height = '174' alt = "Trifid coordinates">
+        <br>
+        <br>
+        <br>
+      </p>
       <form method = 'post'>
         Decrypted Message:
         <textarea id = 'encrypt' name = 'normal_message'>{{decryptedmessage}}</textarea>
@@ -14,8 +42,5 @@
         <textarea id = 'decrypt' name = 'encrypted_message'>{{encryptedmessage}}</textarea>
         <button id = 'button' type="submit" name = 'submitted' value = 'Decrypt'>Decrypt</button>
     </form>
-
-
-
   </body>
 </html>

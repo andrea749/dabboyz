@@ -17,13 +17,14 @@ h1 {
 
 #webname {
   top: 30px;
-  right: 105px;
+  left: 50px;
   text-align: center;
   font-family: 'Audiowide', cursive;
   background-color: black;
   display: block;
-  width: 20%;
-  margin: 0 auto;
+  //*width: 20%;*//
+  margin right: 380px;
+  margin-left: 380px;
   position: relative;
   font-size: 80px;
   color: white;
@@ -38,7 +39,7 @@ h1 {
   margin-left: 20%;
 }
 
-#caesar, #vigenere {
+#caesar, #vigenere, #trifid {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   display: inline-block;
@@ -65,7 +66,7 @@ h1 {
   text-shadow: 0 0 20px #ffff4d, 0 0 20px #ffff4d;
 }
 
-#caesar, #vigenere {
+#caesar, #vigenere, #trifid {
   color: #00ff00;
   background-color: black;
   font-family: 'Source Sans Pro', sans-serif;
@@ -91,16 +92,12 @@ textarea {
 button {
   border: none;
 }
-#vigenere:hover {
-  text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
-}
-
-#caesar:hover {
+#vigenere:hover, #trifid:hover, #caesar:hover {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
 }
 
 #image {
-  left: 90px;
+  padding-left: 180px;
   text-align: center;
 }
 
