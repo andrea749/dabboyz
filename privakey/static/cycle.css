@@ -17,13 +17,14 @@ h1 {
 
 #webname {
   top: 30px;
-  right: 105px;
+  left: 50px;
   text-align: center;
   font-family: 'Audiowide', cursive;
   background-color: black;
   display: block;
-  width: 20%;
-  margin: 0 auto;
+  //*width: 20%;*//
+  margin right: 380px;
+  margin-left: 380px;
   position: relative;
   font-size: 80px;
   color: white;
@@ -96,7 +97,7 @@ button {
 }
 
 #image {
-  left: 90px;
+  padding-left: 180px;
   text-align: center;
 }
 
