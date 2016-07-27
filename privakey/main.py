@@ -196,25 +196,48 @@ class CaesarHandler(webapp2.RequestHandler):
 class TrifidHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('trifid.html')
-        self.response.write(template.render())
-
-    def post(self):
-        template = jinja_environment.get_template('trifid.html')
-        decision = self.request.get('submitted')
-
-        if decision == 'Encrypt':
-            decryptedmessage = self.request.get('normal_message')
-            encryptedmessage = self.Encryptor(decryptedmessage)
-
-        if decision == 'Decrypt':
-            encryptedmessage = self.request.get('encrypted_message')
-            decryptedmessage = self.Decryptor(encryptedmessage)
-
+        ciphername = ciphers['trifid']['name']
+        cipherdescription = ciphers['trifid']['description']
         variables = {
-        'encryptedmessage':encryptedmessage,
-        'decryptedmessage':decryptedmessage
+        'ciphername':ciphername,
+        'cipherdescription':cipherdescription
         }
         self.response.write(template.render(variables))
+
+    def post(self):
+        self.response.headers['Content-Type'] = 'application/json'
+        message2encrypt = self.request.get('message2encrypt')
+        message2decrypt = self.request.get('message2decrypt')
+        try:
+            encrypted = self.Encryptor(message2encrypt)
+        except:
+            pass
+        try:
+            decrypted = self.Decryptor(message2decrypt)
+        except:
+            pass
+        resp = {
+          'encrypted': encrypted,
+          'decrypted': decrypted
+        }
+        return self.response.write(json.dumps(resp))
+
+        # template = jinja_environment.get_template('trifid.html')
+        # decision = self.request.get('submitted')
+        #
+        # if decision == 'Encrypt':
+        #     decryptedmessage = self.request.get('normal_message')
+        #     encryptedmessage = self.Encryptor(decryptedmessage)
+        #
+        # if decision == 'Decrypt':
+        #     encryptedmessage = self.request.get('encrypted_message')
+        #     decryptedmessage = self.Decryptor(encryptedmessage)
+        #
+        # variables = {
+        # 'encryptedmessage':encryptedmessage,
+        # 'decryptedmessage':decryptedmessage
+        # }
+        # self.response.write(template.render(variables))
 
     def Encryptor(self, message):
         answer = trifid_encryptor(message)

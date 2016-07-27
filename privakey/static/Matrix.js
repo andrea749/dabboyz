@@ -11,7 +11,6 @@ c.width = window.innerWidth;
 var binary = ["01010000","01010010", "01001001", "01010110", "01000001","01001011", "01000101","01011001"];
 //converting the string into an array of single characters
 
-
 var font_size = 20;
 var columns = c.width/font_size; //number of columns for the rain
 //an array of drops - one per column
@@ -28,14 +27,24 @@ function draw()
 	//translucent BG to show trail
 	ctx.fillStyle = "rgba(0, 0, 0, 0.02)";
 	ctx.fillRect(0, 0, c.width, c.height);
-
-	ctx.fillStyle = "#0F0"; //green text
 	ctx.font = font_size + "px monospace";
 	//looping over drops
 	for(var i = 0; i < drops.length; i++)
 	{
 		//a binary code to print
 		var text = binary[Math.floor(Math.random()*binary.length)];
+
+		if (text == "01010000" || text == "01010010" ){
+			ctx.fillStyle = "#0000FF"
+		}
+
+		else if (text == "01001001" || text == "01000001" ){
+			ctx.fillStyle = "#FF0000"
+		}
+		else {
+			ctx.fillStyle = "#00FF00"
+		}
+
 		//x = i*font_size, y = value of drops[i]*font_size
 		ctx.fillText(text, i*font_size, drops[i]*font_size);
 
