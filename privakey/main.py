@@ -25,6 +25,7 @@ from caesarian_shift import caesar_encryptor
 from caesarian_shift import caesar_decryptor
 from copy import copy
 from trifid import find
+from trifid import slice_list
 from trifid import trifid_encryptor
 from trifid import trifid_decryptor
 
