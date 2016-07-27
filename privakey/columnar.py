@@ -11,6 +11,8 @@ def columnar_encryptor(message, code_word):
 
      cycle_size = len(code_word)
 
+     cycle_number = int(math.floor(length / cycle_size))
+
      code_word = code_word.lower()
 
      shifts = []
@@ -33,20 +35,14 @@ def columnar_encryptor(message, code_word):
          j = code_word.index(letter)
          letterlower = letter.lower()
          #pregap is the number of characters in the message before the current column
-         pregap = j * len(code_word)
-         #positions is a list of the positions of the letters in the given column
-         positions = []
-         for current in range(0,len(code_word)):
-             position = pregap + current
-             encrypted.append(message[position])
-     encryptedmessage = "".join(encrypted)
+         for sequence in range (0,cycle_size)
 
      return encryptedmessage
 
-code_word = raw_input('Code word: ')
-message = raw_input('Message: ')
-
-print columnar_encryptor(message, code_word)
+# code_word = raw_input('Code word: ')
+# message = raw_input('Message: ')
+#
+# print columnar_encryptor(message, code_word)
 
 
 
