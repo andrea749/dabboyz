@@ -42,7 +42,7 @@ button {
   border: none;
 }
 
-#caesar:hover, #vigenere:hover {
+#caesar:hover, #vigenere:hover, #trifid:hover {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
 }
 
@@ -50,7 +50,7 @@ button {
     text-shadow: 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00;
 }
 
-#caesar, #vigenere {
+#caesar, #vigenere, #trifid {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   position: relative;
@@ -110,7 +110,7 @@ body {
   margin-left: 20%;
 }
 
-#caesar, #vigenere {
+#caesar, #vigenere, #trifid {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   position: relative;
@@ -136,7 +136,7 @@ body {
   text-shadow: 0 0 20px #ffff4d, 0 0 20px #ffff4d;
 }
 
-#caesar, #vigenere {
+#caesar, #vigenere, #trifid {
   color: #00ff00;
   background-color: black;
   font-family: 'Source Sans Pro', sans-serif;
@@ -167,13 +167,10 @@ textarea {
 button {
   border: none;
 }
-#vigenere:hover {
+#caesar:hover, #vigenere:hover, #trifid:hover {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
 }
 
-#caesar:hover {
-  text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
-}
 
 #number {
   position: relative;

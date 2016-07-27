@@ -17,11 +17,17 @@ canvas {display: block;}
 .button {
   background-color: black;
   color: #0F0;
+<<<<<<< HEAD
   padding: 60px;
   width: 550px;
   text-align: 40px;
+=======
+  padding: 40px 230px;
+  font-family: 'Audiowide', cursive;
+  text-align: center;
+>>>>>>> 04eadf506d5786c25c04ce60bc402a706e9498c3
   display: block;
-  font-size: 25px;
+  font-size: 35px;
   cursor: pointer;
   border: 7px solid #0F0;
   border-radius: 15px;
