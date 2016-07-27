@@ -38,5 +38,9 @@ ciphers = {
         <image id ='image' src = '../static/trifid.jpg' width = '212' height = '174' alt = 'Trifid coordinates'>\
         <br>\
         It then codes the words by reading the rows instead of columns. That way, the first two letters (111, 123) become 'ah' and 'dadboyz' becomes 'ahshebr'."
+    },
+    'columnar':{
+    'name': 'Columnar Transposition',
+    'description': 'LEEDLELEEDLELEEEEE'
     }
 }
