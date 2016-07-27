@@ -15,7 +15,7 @@ this file is for the Caesar cipher article -->
     <form action = '/' method = 'post'>
       <button id = 'webname' type = 'Submit'>Privakey</button>
     </form>
-    <h1>Caesar Cipher</h1>
+    <h1>{{ciphername}} Cipher</h1>
       <p id = 'ciphers'>Ciphers</p>
         <p><form action = 'caesar'>
         <button id = 'caesar' type = 'Submit'>
@@ -29,30 +29,29 @@ this file is for the Caesar cipher article -->
        <button id = 'trifid' type = 'Submit'>Trifid</button>
      </form>
       </p>
-    <!-- <p id = 'sidebar'>Ciphers <br>
-      <form action = 'caesar'>
-      <button id = 'caesar' type = 'Submit'>
-        Caesar</button>
-    </form>
-    <form action = 'cycle'>
-      <button id = 'vigenere' type = 'Submit'>
-        Vigenere</button>
-    </form>
-    </p>
-<<<<<<< HEAD
-    <p id = 'name_of_cipher'>Caesar</p> -->
-    <p id = 'description'>The Caesar cipher is a classic cipher. The Caesar
-      cipher, also known as a rotation cipher, essentially involves shifting
-      the alphabet by a certain number. So in a Caesar cipher of 1, 'a'
-      becomes 'b', 'b becomes c, and so on with 'z' becoming 'a'. So in a Caesar
-      cipher of 1, 'dadboyz' becomes 'ebecpza'<p>
-    <form method = 'post'>
+
+    <p id = 'description'>{{cipherdescription}}<p>
+    <!-- <form method = 'post'>
       <input id = 'number' type = 'number' name = 'shift' min = '1' max = '26'>
       <textarea id = 'encrypt' name = 'normal_message'>{{decryptedmessage}}</textarea>
       <button id = 'crypt' type="submit" name = 'submitted' value = 'Encrypt'>Encrypt</button>
       <textarea id = 'decrypt' name = 'encrypted_message'>{{encryptedmessage}}</textarea>
       <button id = 'crypt' type="submit" name = 'submitted' value = 'Decrypt'>Decrypt</button>
-  </form>
+  </form> -->
+
+      <input id = 'shift' type = 'number' name = 'shift' min = '1' max = '26'>
+
+      <input type = 'text' name='fname' class='chatinput' id = 'encryptbox'>
+      <input type = 'text' name='fname' class='chatinput' id = 'decryptbox'>
+
+      <div class='printchatbox' id='encryptedbox'></div>
+      <div class='printchatbox' id='decryptedbox'></div>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" type="text/javascript" ></script>
+      <script src='static/caesar_live_encryptor.js'></script>
+
+
   </body>
 </html>
 

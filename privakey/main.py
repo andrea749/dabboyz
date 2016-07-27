@@ -127,33 +127,59 @@ class CycleHandler(webapp2.RequestHandler):
 class CaesarHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('cipherarticles.html')
-        self.response.write(template.render())
+        ciphername = ciphers['caesar']['name']
+        cipherdescription = ciphers['caesar']['description']
+        variables = {
+        'ciphername':ciphername,
+        'cipherdescription':cipherdescription
+        }
+        self.response.write(template.render(variables))
 
     def post(self):
-        template = jinja_environment.get_template('cipherarticles.html')
-        decision = self.request.get('submitted')
+        self.response.headers['Content-Type'] = 'application/json'
+        message2encrypt = self.request.get('message2encrypt')
+        message2decrypt = self.request.get('message2decrypt')
+        shift = self.request.get('shift')
+        try:
+            encrypted = self.Encryptor(message2encrypt)
+        except:
+            pass
+        try:
+            decrypted = self.Decryptor(message2decrypt)
+        except:
+            pass
+        resp = {
+          'encrypted': encrypted,
+          'decrypted': decrypted
+        }
+        return self.response.write(json.dumps(resp))
 
-        if not self.request.get('shift'):
-            decryptedmessage = 'ERROR: Please input shift parameter.'
-            variable = {'decryptedmessage':decryptedmessage}
-            self.response.write(template.render(variable))
 
-        else:
-            if decision == 'Encrypt':
-                decryptedmessage = self.request.get('normal_message')
-                encryptedmessage = self.Encryptor(decryptedmessage)
 
-            if decision == 'Decrypt':
-                encryptedmessage = self.request.get('encrypted_message')
-                decryptedmessage = self.Decryptor(encryptedmessage)
-
-            shift = int(self.request.get('shift'))
-            variables = {
-            'shift':shift,
-            'encryptedmessage':encryptedmessage,
-            'decryptedmessage':decryptedmessage
-            }
-            self.response.write(template.render(variables))
+        # template = jinja_environment.get_template('cipherarticles.html')
+        # decision = self.request.get('submitted')
+        #
+        # if not self.request.get('shift'):
+        #     decryptedmessage = 'ERROR: Please input shift parameter.'
+        #     variable = {'decryptedmessage':decryptedmessage}
+        #     self.response.write(template.render(variable))
+        #
+        # else:
+        #     if decision == 'Encrypt':
+        #         decryptedmessage = self.request.get('normal_message')
+        #         encryptedmessage = self.Encryptor(decryptedmessage)
+        #
+        #     if decision == 'Decrypt':
+        #         encryptedmessage = self.request.get('encrypted_message')
+        #         decryptedmessage = self.Decryptor(encryptedmessage)
+        #
+        #     shift = int(self.request.get('shift'))
+        #     variables = {
+        #     'shift':shift,
+        #     'encryptedmessage':encryptedmessage,
+        #     'decryptedmessage':decryptedmessage
+        #     }
+        #     self.response.write(template.render(variables))
 
     def Encryptor(self, message):
         decryptedmessage = message
