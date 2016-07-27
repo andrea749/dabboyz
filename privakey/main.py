@@ -19,6 +19,8 @@ import logging
 import jinja2
 import os
 import math
+import json
+from cipherinfo import ciphers
 from cycle_encryption import cycle_encryptor
 from cycle_encryption import cycle_decryptor
 from caesarian_shift import caesar_encryptor
@@ -50,33 +52,64 @@ class MainHandler(webapp2.RequestHandler):
 class CycleHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('cycle.html')
-        self.response.write(template.render())
+        ciphername = ciphers['cycle']['name']
+        cipherdescription = ciphers['cycle']['description']
+        variables = {
+        'ciphername':ciphername,
+        'cipherdescription':cipherdescription
+        }
+        self.response.write(template.render(variables))
 
     def post(self):
-        template = jinja_environment.get_template('cycle.html')
-        decision = self.request.get('submitted')
-
-        if not self.request.get('code_word'):
-            code_word = 'ERROR: Please input shift parameter.'
-            variable = {'code_word':code_word}
-            self.response.write(template.render(variable))
-
-        else:
-            if decision == 'Encrypt':
-                decryptedmessage = self.request.get('normal_message')
-                encryptedmessage = self.Encryptor(decryptedmessage)
-
-            if decision == 'Decrypt':
-                encryptedmessage = self.request.get('encrypted_message')
-                decryptedmessage = self.Decryptor(encryptedmessage)
-            code_word = self.request.get('code_word')
-
-            variables = {
-            'encryptedmessage':encryptedmessage,
-            'decryptedmessage':decryptedmessage,
-            'code_word':code_word
-            }
-            self.response.write(template.render(variables))
+        self.response.headers['Content-Type'] = 'application/json'
+        message2encrypt = self.request.get('message2encrypt')
+        message2decrypt = self.request.get('message2decrypt')
+        code_word = self.request.get('code_word')
+        try:
+            encrypted = self.Encryptor(message2encrypt)
+        except:
+            pass
+        try:
+            decrypted = self.Decryptor(message2decrypt)
+        except:
+            pass
+        resp = {
+          'encrypted': encrypted,
+          'decrypted': decrypted
+        }
+        return self.response.write(json.dumps(resp))
+        # template = jinja_environment.get_template('cycle.html')
+        # ciphername = ciphers['cycle']['name']
+        # cipherdescription = ciphers['cycle']['description']
+        # decision = self.request.get('submitted')
+        #
+        # if not self.request.get('code_word'):
+        #     code_word = 'ERROR: Please input shift parameter.'
+        #     variable = {
+        #     'ciphername':ciphername,
+        #     'cipherdescription':cipherdescription,
+        #     'code_word':code_word
+        #     }
+        #     self.response.write(template.render(variable))
+        #
+        # else:
+        #     if decision == 'Encrypt':
+        #         decryptedmessage = self.request.get('normal_message')
+        #         encryptedmessage = self.Encryptor(decryptedmessage)
+        #
+        #     if decision == 'Decrypt':
+        #         encryptedmessage = self.request.get('encrypted_message')
+        #         decryptedmessage = self.Decryptor(encryptedmessage)
+        #     code_word = self.request.get('code_word')
+        #
+        #     variables = {
+        #     'ciphername':ciphername,
+        #     'cipherdescription':cipherdescription,
+        #     'encryptedmessage':encryptedmessage,
+        #     'decryptedmessage':decryptedmessage,
+        #     'code_word':code_word
+        #     }
+        #     self.response.write(template.render(variables))
 
     def Encryptor(self, message):
         decryptedmessage = message
@@ -166,11 +199,57 @@ class TrifidHandler(webapp2.RequestHandler):
         return answer
 
 
+class ColumnarHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('cycle.html')
+        self.response.write(template.render())
+
+    def post(self):
+        template = jinja_environment.get_template('cycle.html')
+        decision = self.request.get('submitted')
+
+        if not self.request.get('code_word'):
+            code_word = 'ERROR: Please input shift parameter.'
+            variable = {'code_word':code_word}
+            self.response.write(template.render(variable))
+
+        else:
+            if decision == 'Encrypt':
+                decryptedmessage = self.request.get('normal_message')
+                encryptedmessage = self.Encryptor(decryptedmessage)
+
+            if decision == 'Decrypt':
+                encryptedmessage = self.request.get('encrypted_message')
+                decryptedmessage = self.Decryptor(encryptedmessage)
+            code_word = self.request.get('code_word')
+
+            variables = {
+            'encryptedmessage':encryptedmessage,
+            'decryptedmessage':decryptedmessage,
+            'code_word':code_word
+            }
+            self.response.write(template.render(variables))
+
+    def Encryptor(self, message):
+        decryptedmessage = message
+        code_word = str(self.request.get('code_word'))
+        answer = cycle_encryptor(decryptedmessage, code_word)
+        return answer
+
+    def Decryptor(self, message):
+        encryptedmessage = message
+        code_word = str(self.request.get('code_word'))
+        answer = cycle_decryptor(encryptedmessage, code_word)
+        return answer
+
+
+
 
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/cycle', CycleHandler),
     ('/caesar', CaesarHandler),
-    ('/trifid', TrifidHandler)
+    ('/trifid', TrifidHandler),
+    ('/columnar',ColumnarHandler)
 ], debug=True)

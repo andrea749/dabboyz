@@ -38,7 +38,6 @@ button {
   position: relative;
   left: 0px;
   top: 40px;
-  background-color: black;
   border: none;
 }
 
@@ -83,10 +82,11 @@ h1 {
   color: white;
   position: relative;
   top: 25px;
+  left: 50px;
 }
 
 #webname {
-  font-family: 'Audiowide', cursive;
+  /*font-family: 'Audiowide', cursive;
   background-color: black;
   display: block;
   width: 20%;
@@ -95,6 +95,20 @@ h1 {
   font-size: 60px;
   color: white;
   clear: both;
+  margin right: 380px;
+  margin-left: 380px;
+  text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;*/
+  top: 30px;
+  right: 460px;
+  text-align: center;
+  font-family: 'Audiowide', cursive;
+  background-color: black;
+  display: block;
+  margin right: 480px;
+  margin-left: 350px;
+  position: relative;
+  font-size: 80px;
+  color: white;
   text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
 }
 

@@ -1,116 +1,26 @@
-body {
-  background-color: black;
-}
+/*basic reset*/
+* {margin: 0; padding: 0;}
+/*adding a black bg to the body to make things clearer*/
+body {background: black;}
+canvas {display: block;}
 
-p {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #00ff00
-}
 
-h1 {
-  top: 30px;
+.welcome {
+  margin: auto;
+  width: 50%;
+  border: 7px solid #0F0;
+  padding: 20px;
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
-  color: white;
-}
-
-#webname {
-  top: 30px;
-  right: 80px;
-  text-align: center;
-  font-family: 'Audiowide', cursive;
+  border-radius: 15px;
+  color :#0F0;
   background-color: black;
+  font-size: 30px
   display: block;
-  margin right: 380px;
-  margin-left: 380px;
-  position: relative;
-  font-size: 80px;
-  color: white;
-  text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
-}
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-#form_text {
-  color: white;
-  line-height: 2;
-  font-family: 'Source Sans Pro', sans-serif;
-  position: relative;
-  margin-left: 20%;
-}
-
-#caesar, #vigenere, #trifid {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
-  display: inline-block;
-  position: relative;
-  top: 0px;
-  border-bottom: double;
-  border-right: double;
-  border-top: double;
-  border-color: #00ff00;
-  padding-right: 80px;
-  padding-top: 5px;
-  padding-bottom:5px;
-  padding-left: 0px;
-}
-#ciphers {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
-  position: relative;
-  top: 0px;
-  padding-right: 80px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  text-shadow: 0 0 20px #ffff4d, 0 0 20px #ffff4d;
-}
-
-#caesar, #vigenere, #trifid {
-  color: #00ff00;
-  background-color: black;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
-  /*margin-left: 20%;*/
-  margin-right: auto;
-  text-shadow: 0 0 20px #ffffff;
-  position: relative;
-}
-
-#description {
-  margin-left: 20%;
-  right: 1%;
-  margin-right: auto;
-  position: relative;
-  bottom: 100px;
-}
-
-textarea {
-  display: inline-block;
-}
-
-button {
-  border: none;
-}
-#vigenere:hover, #trifid:hover, #caesar:hover {
-  text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
-}
-
-#image {
-  padding-left: 180px;
-  text-align: center;
-}
-
-
-#form_text {
-  bottom: 100px;
-}
-
-
-.printchatbox {border-width:thick 10px;border-style: solid;
-    background-color:#fff;
-    line-height: 2;color:#6E6A6B;font-size: 14pt;text-align:left;float: middle;
-    border: 3px solid #969293;width:40%;
-     height:2em;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
