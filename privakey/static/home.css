@@ -121,13 +121,16 @@ h1 {
 }
 
 #webname {
+  top: 30px;
+  right: 140px;
+  text-align: center;
   font-family: 'Audiowide', cursive;
   background-color: black;
   display: block;
-  width: 20%;
-  margin: 0 auto;
+  margin right: 480px;
+  margin-left: 480px;
   position: relative;
-  font-size: 60px;
+  font-size: 80px;
   color: white;
   text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
 }

@@ -7,31 +7,65 @@
   <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="../static/cycle.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<<<<<<< HEAD
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"> </script>
+  <script src="static/cycle.js"></script>
+=======
 <!--  -->
+>>>>>>> 57acda623764bd71d151a3ce2746657b0909828e
 </head>
 <body>
-  <form action = '/' method = 'post'>
+    <form action = '/' method = 'post'>
     <button id = 'webname' type = 'Submit'>Privakey</button>
+<<<<<<< HEAD
+    </form>
+    <br>
+
+    <h1>Vigenere Cipher</h1>
+    <p id = 'ciphers'>Ciphers</p>
+    <p><form action = 'caesar'>
+    <button id = 'caesar' type = 'Submit'>Caesar</button>
+=======
   </form>
   <h1>{{ciphername}} Cipher</h1>
   <p id = 'ciphers'>Ciphers</p>
   <p><form action = 'caesar'>
   <button id = 'caesar' type = 'Submit'>
         Caesar</button>
+>>>>>>> 57acda623764bd71d151a3ce2746657b0909828e
     </form>
     <form action = 'cycle'>
-      <button id = 'vigenere' type = 'Submit'>
-        Vigenere</button>
+    <button id = 'vigenere' type = 'Submit'>Vigenere</button>
     </form>
     <form action = 'trifid'>
-     <button id = 'trifid' type = 'Submit'>Trifid</button>
-   </form>
+    <button id = 'trifid' type = 'Submit'>Trifid</button>
+    </form>
     </p>
     <p id = 'description'>
+<<<<<<< HEAD
+    The Vigenere cipher is similar to the classic Caesarian shift but allows for multiple values of offset. The image
+    below shows what each shift would look like.
+    <br>
+    <br>
+    <br>
+    <image id ="image" src = '../static/caesarshift2.jpg' width = '475' height = '200' alt = "Caesar cipher wheel">
+    <br>
+    <br>
+    <br>
+    The offsets are determined by a keyword chosen by the user. For example,
+    if the keyword is "abc" then the set of offsets would be 1,2,3 and every
+    third letter would be replaced by the next letter in the alphabet, every      letter after those would be replaced by the letter 2 places above in the
+    alphabet, and every letter after that would be replaced by the letter
+    3 places ahead. So, with a keyword "abc", "dadboyz" becomes "ecgcqba".
+    </p>
+    <form method = 'post' id = 'form_text'>
+    What will your code word be? &nbsp <textarea name = 'code_word' rows = '1'>{{code_word}}</textarea>
+=======
       {{cipherdescription}}
     </p>
     <!-- <form method = 'post' id = 'form_text'>
       What will your code word be? &nbsp <textarea name = 'code_word' rows = '1'>{{code_word}}</textarea>
+>>>>>>> 57acda623764bd71d151a3ce2746657b0909828e
       <br>
 
       Insert message to encrypt: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Insert message to decrypt: <br>
