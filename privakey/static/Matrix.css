@@ -17,8 +17,9 @@ canvas {display: block;}
 .button {
   background-color: black;
   color: #0F0;
-  padding: 40px 230px;
-  text-align: center;
+  padding: 60px;
+  width: 550px;
+  text-align: 40px;
   display: block;
   font-size: 25px;
   cursor: pointer;
