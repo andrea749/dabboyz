@@ -15,29 +15,22 @@ this file is for the Caesar cipher article -->
     <form action = '/' method = 'post'>
       <button id = 'webname' type = 'Submit'>Privakey</button>
     </form>
-    <h1>{{ciphername}} Cipher</h1>
       <p id = 'ciphers'>Ciphers</p>
         <p><form action = 'caesar'>
         <button id = 'caesar' type = 'Submit'>
-          Caesar</button>
+          <span>Caesar</span></button>
       </form>
       <form action = 'cycle'>
         <button id = 'vigenere' type = 'Submit'>
-          Vigenere</button>
+          <span>Vigenere</span></button>
       </form>
       <form action = 'trifid'>
-       <button id = 'trifid' type = 'Submit'>Trifid</button>
+       <button id = 'trifid' type = 'Submit'>
+         <span>Trifid</span></button>
      </form>
       </p>
 
     <p id = 'description'>{{cipherdescription}}<p>
-    <!-- <form method = 'post'>
-      <input id = 'number' type = 'number' name = 'shift' min = '1' max = '26'>
-      <textarea id = 'encrypt' name = 'normal_message'>{{decryptedmessage}}</textarea>
-      <button id = 'crypt' type="submit" name = 'submitted' value = 'Encrypt'>Encrypt</button>
-      <textarea id = 'decrypt' name = 'encrypted_message'>{{encryptedmessage}}</textarea>
-      <button id = 'crypt' type="submit" name = 'submitted' value = 'Decrypt'>Decrypt</button>
-  </form> -->
 
       <input id = 'shift' type = 'number' name = 'shift' min = '1' max = '26'>
 

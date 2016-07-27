@@ -17,14 +17,15 @@ h1 {
 
 #webname {
   top: 30px;
-  right: 80px;
+  right: 20px;
   text-align: center;
   font-family: 'Audiowide', cursive;
   background-color: black;
   display: block;
-  margin right: 380px;
+  margin-right: 380px;
   margin-left: 380px;
   position: relative;
+  left: 150px;
   font-size: 80px;
   color: white;
   text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
