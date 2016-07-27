@@ -7,12 +7,17 @@
   <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="../static/cycle.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<<<<<<< HEAD
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"> </script>
   <script src="static/cycle.js"></script>
+=======
+<!--  -->
+>>>>>>> 57acda623764bd71d151a3ce2746657b0909828e
 </head>
 <body>
     <form action = '/' method = 'post'>
     <button id = 'webname' type = 'Submit'>Privakey</button>
+<<<<<<< HEAD
     </form>
     <br>
 
@@ -20,6 +25,14 @@
     <p id = 'ciphers'>Ciphers</p>
     <p><form action = 'caesar'>
     <button id = 'caesar' type = 'Submit'>Caesar</button>
+=======
+  </form>
+  <h1>{{ciphername}} Cipher</h1>
+  <p id = 'ciphers'>Ciphers</p>
+  <p><form action = 'caesar'>
+  <button id = 'caesar' type = 'Submit'>
+        Caesar</button>
+>>>>>>> 57acda623764bd71d151a3ce2746657b0909828e
     </form>
     <form action = 'cycle'>
     <button id = 'vigenere' type = 'Submit'>Vigenere</button>
@@ -29,6 +42,7 @@
     </form>
     </p>
     <p id = 'description'>
+<<<<<<< HEAD
     The Vigenere cipher is similar to the classic Caesarian shift but allows for multiple values of offset. The image
     below shows what each shift would look like.
     <br>
@@ -46,35 +60,32 @@
     </p>
     <form method = 'post' id = 'form_text'>
     What will your code word be? &nbsp <textarea name = 'code_word' rows = '1'>{{code_word}}</textarea>
+=======
+      {{cipherdescription}}
+    </p>
+    <!-- <form method = 'post' id = 'form_text'>
+      What will your code word be? &nbsp <textarea name = 'code_word' rows = '1'>{{code_word}}</textarea>
+>>>>>>> 57acda623764bd71d151a3ce2746657b0909828e
       <br>
-
-      <!-- What will the first shift be? (Max 25) <input type = 'number' name = 'shift1' min = '1' max = '25'>
-      <br>
-      What will the second shift be? (Max 25) <input type = 'number' name = 'shift2' min = '1' max = '25'>
-      <br>
-      What will the third shift be? (Max 25) <input type = 'number' name = 'shift3' min = '1' max = '25'>
-      <br>
-      What will the fourth shift be? (Max 25) <input type = 'number' name = 'shift4' min = '1' max = '25'>
-      <br>
-      What will the fifth shift be? (Max 25) <input type = 'number' name = 'shift5' min = '1' max = '25'>
-      <br>
-      What will the sixth shift be? (Max 25) <input type = 'number' name = 'shift6' min = '1' max = '25'>
-      <br>
-      What will the seventh shift be? (Max 25) <input type = 'number' name = 'shift7' min = '1' max = '25'>
-      <br>
-      What will the eighth shift be? (Max 25) <input type = 'number' name = 'shift8' min = '1' max = '25'>
-      <br>
-      What will the ninth shift be? (Max 25) <input type = 'number' name = 'shift9' min = '1' max = '25'>
-      <br>
-      What will the tenth shift be? (Max 25) <input type = 'number' name = 'shift10' min = '1' max = '25'>
-      <br> -->
 
       Insert message to encrypt: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Insert message to decrypt: <br>
       <textarea rows='10' cols='50' name='normal_message'>{{decryptedmessage}}</textarea>
       <input type = 'submit' value = 'Encrypt' name = 'submitted'>
       <textarea rows='10' cols='50' name='encrypted_message'>{{encryptedmessage}}</textarea>
       <input type = 'submit' value = 'Decrypt' name = 'submitted'>
-    </form>
+    </form> -->
 
+
+    <input type = 'text' id = 'code_word'>
+    <input type = 'text' name='fname' class='chatinput' id = 'encryptbox'>
+    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox'>
+
+    <div class='printchatbox' id='encryptedbox'></div>
+    <div class='printchatbox' id='decryptedbox'></div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" type="text/javascript" ></script>
+    <script src='static/live_encryptor.js'></script>
 </body>
 </html>
