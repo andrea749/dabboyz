@@ -10,7 +10,7 @@
     <script src="static/homepage.js"></script>
     <meta charset="utf-8">
     <title>
-    Homepage
+    Privakey Home
     </title>
    </head>
     <body>
@@ -19,7 +19,11 @@
       <button id = 'webname' type = 'Submit'>Privakey</button>
     </form>
       <p id = 'ciphers'>Ciphers</p>
-    <p><form action = 'caesar'>
+      <table id = "sidebar_and_description">
+        <tr>
+          <td>
+      <div id = "sidebar_buttons">
+    <form action = 'caesar'>
       <button id = 'caesar' type = 'Submit'><span>Caesar</span></button></form>
     <form action = 'cycle'>
      <button id = 'vigenere' type = 'Submit'><span>Vigenere</span></button>
@@ -32,17 +36,21 @@
     <span>Columnar</span>
   </button>
   </form>
- </p>
+</div>
+</td>
 
-     <div id="container3">
-     <div id="container2">
+     <!-- <div id="container3">
+     <div id="container2"> -->
+     <td>
      <div id="container1">
-     <div id="statement"><p id = 'description'>Statement</p>Dadboyz created this encryption web app to allow for more privacy between users. With some ciphers, all that you need is the keyword and the message. Then, simply go to the correct page, input your encrypted message and the code word, and receive the original message.</div>
-     <div id="history"><p id ='description'>History</p>Ciphers have been used all through out history. They have helped groups keep sensitive information safe from others by making a message readable only to a select few. Here, we have replicated a few types of ciphers for you.</div>
-     <div id="details"><p id = 'description'>Details</p>On the left sidebar, you will see a list of the ciphers we have to offer. On each's individual page, there is a description on how it works followed by the appropriate boxes to customize it the way you want. Then, you simply enter the message you want to encrypt or decrypt and recieve the new message.</div>
-
+     <div id="statement"><p id = 'description'>Statement</p><p class = "describe">Dadboyz created this encryption web app to allow for more privacy between users. With some ciphers, all that you need is the keyword and the message. Then, simply go to the correct page, input your encrypted message and the code word, and receive the original message.</p></div>
+     <div id="history"><p id ='description'>History</p><p class = "describe">Ciphers have been used all throughout history. They have helped groups keep sensitive information safe from others by making a message readable only to a select few. Here, we have replicated a few types of ciphers for you.</p></div>
+     <div id="details"><p id = 'description'>Details</p><p class = "describe">On the left sidebar, you will see a list of the ciphers we have to offer. On each cipher's page, there is a description of how it works followed by the appropriate boxes to customize it the way you want. Then, you simply enter the message you want to encrypt or decrypt and recieve the new message.</p></div>
     </div>
-    </div>
-    </div>
+  </td>
+  </tr>
+  </table>
+    <!-- </div>
+    </div> -->
     </body>
 </html>

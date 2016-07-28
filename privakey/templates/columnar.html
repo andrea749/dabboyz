@@ -5,7 +5,7 @@
   <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
   <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
   <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="../static/cycle.css">
+  <link rel="stylesheet" type="text/css" href="../static/columnar.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" type='text/javascript'> </script>
   <script src="static/cycle.js" type="text/javascript"></script>
@@ -28,14 +28,19 @@
     <form action = 'trifid'>
     <button id = 'trifid' type = 'Submit'><span>Trifid</span></button>
     </form>
+    <form action = 'columnar'>
+    <button id = 'columnar' type = 'Submit'>
+      <span>Columnar</span>
+    </button>
+    </form>
     </p>
     <p id = 'description'>
     {{cipherdescription}}
     </p>
 
-    <input type = 'text' id = 'code_word'>
-    <input type = 'text' name='fname' class='chatinput' id = 'encryptbox'>
-    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox'>
+    <input type = 'text' id = 'code_word' placeholder="code word">
+    <input type = 'text' name='fname' class='chatinput' id = 'encryptbox' placeholder="encrypt">
+    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox' placeholder="decrypt">
 
     <div class='printchatbox' id='encryptedbox'></div>
     <div class='printchatbox' id='decryptedbox'></div>

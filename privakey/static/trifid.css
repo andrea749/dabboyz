@@ -15,12 +15,35 @@ body {
   background-color: #000000
 }
 
-#name_of_cipher {
+h1 {
   text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
+  color: white;
+}
+
+#name_of_cipher {
+  margin-left: auto;
+  display: block;
+  top: 95px;
+  /* left: 500px; */
+  text-align: center;
+  font-size: 25pt;
+  color: #ffffff;
+  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
+  margin-right: auto;
+}
+  /*display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 95px;
+  /*left: 500px;*/
+  /*text-align: center;
   font-size: 50px;
   color: #ffffff;
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
-}
+}*/
 
 button {
   position: relative;
@@ -44,7 +67,12 @@ button {
   border: none;
 }
 
-#caesar:hover, #vigenere:hover, #trifid:hover {
+input {
+  font-size: 16pt;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#caesar:hover, #vigenere:hover, #trifid:hover, #columnar:hover {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
 }
 
@@ -52,25 +80,32 @@ button {
     text-shadow: 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00, 0 0 20px #00ff00;
 }
 
-#caesar, #vigenere, #trifid {
+#caesar, #vigenere, #trifid, #columnar {
+  text-align: left;
+  width: 8%;
+  color: #00ff00;
+  background-color: black;
+  text-decoration: none;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 0 20px #ffffff;
+  position: relative;
+  left: 0px;
+  height:22px;
+  border-color: #00ff00;
+  display: inline-block;
   position: relative;
   top: 0px;
   border-bottom: double;
   border-right: double;
   border-top: double;
-  border-color: #00ff00;
+  border-color: #00ff00, 0 0 20px #ffffff;
   padding-right: 80px;
   padding-top: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 30px;
   padding-left: 0px;
-  color: #00ff00;
-  background-color: black;
-  /*margin-left: 20%;*/
-  margin-right: auto;
-  margin-left: auto;
-  text-shadow: 0 0 20px #ffffff;
 }
 
 p {
@@ -78,21 +113,14 @@ p {
   color: #00ff00
 }
 
-h1 {
+
+/*h1 {
   top: 30px;
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
   color: white;
-
-
-  }
-
-#name_of_cipher {
-  position: absolute;
-  top: 95px;
-  left: 600px;
-}
+}*/
 
 #webname {
   top: 20px;
@@ -100,8 +128,8 @@ h1 {
   font-family: 'Audiowide', cursive;
   background-color: transparent;
   display: block;
-  margin-right: 380px;
-  margin-left: 330px;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
   font-size: 80px;
   color: white;
@@ -120,7 +148,7 @@ body {
   margin-left: 20%;
 }
 
-#caesar, #vigenere, #trifid {
+/*#caesar, #vigenere, #trifid, #columnar {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   position: relative;
@@ -133,7 +161,7 @@ body {
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
-}
+}*/
 #ciphers {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
@@ -146,16 +174,16 @@ body {
   text-shadow: 0 0 20px #ffff4d, 0 0 20px #ffff4d;
 }
 
-#caesar, #vigenere, #trifid {
+/*#caesar, #vigenere, #trifid, #columnar {
   color: #00ff00;
   background-color: black;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   /*margin-left: 20%;*/
-  margin-right: auto;
+  /*margin-right: auto;
   text-shadow: 0 0 20px #ffffff;
   position: relative;
-}
+}*/
 
 #description {
   margin-left: 10%;
@@ -164,6 +192,7 @@ body {
   top: 200px;
   text-align: center;
   left: 150px;
+  font-size: 20pt;
 }
 
 textarea {
@@ -177,7 +206,7 @@ textarea {
 button {
   border: none;
 }
-#caesar:hover, #vigenere:hover, #trifid:hover {
+#caesar:hover, #vigenere:hover, #trifid:hover, #columnar:hover {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
 }
 
@@ -230,6 +259,14 @@ button {
   content: "Taruio";
 }
 
+#columnar:hover span {
+  display: none;
+}
+
+#columnar:hover:before {
+  content: "Oncmurla";
+}
+
 #encryptbox, #decryptbox, #encryptedbox, #decryptedbox {
   position: relative;
   left: 350px;
@@ -244,6 +281,7 @@ button {
   color: #00ff00;
   margin-top: 40px;
   left: 275px;
+  font-size: 16pt;
 }
 
 input::-webkit-input-placeholder {
@@ -270,7 +308,7 @@ input:-ms-input-placeholder {
   background-color: black;
   border: none;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 30px;
+  font-size: 25pt;
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
   color: white;
   position: relative;
