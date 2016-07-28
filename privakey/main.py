@@ -72,11 +72,11 @@ class CycleHandler(webapp2.RequestHandler):
         try:
             encrypted = self.Encryptor(message2encrypt)
         except:
-            pass
+            encrypted = ''
         try:
             decrypted = self.Decryptor(message2decrypt)
         except:
-            pass
+            decrypted = ''
         resp = {
           'encrypted': encrypted,
           'decrypted': decrypted
