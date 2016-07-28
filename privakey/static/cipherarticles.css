@@ -86,18 +86,6 @@ h1 {
 }
 
 #webname {
-  /*font-family: 'Audiowide', cursive;
-  background-color: black;
-  display: block;
-  width: 20%;
-  margin: 0 auto;
-  position: relative;
-  font-size: 60px;
-  color: white;
-  clear: both;
-  margin right: 380px;
-  margin-left: 380px;
-  text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;*/
   top: 30px;
   right: 600px;
   text-align: center;
@@ -193,6 +181,29 @@ button {
 textarea {
   position: relative;
 }
+#caesar:hover span {
+  display: none;
+}
+
+#caesar:hover:before {
+  content: "Dbftbs";
+}
+
+#vigenere:hover span {
+  display: none;
+}
+
+#vigenere:hover:before {
+  content: "Wkjfphsg";
+}
+
+#trifid:hover span {
+  display: none;
+}
+
+#trifid:hover:before {
+  content: "Taruio";
+}
 
 .printchatbox {border-width:thick 10px;border-style: solid;
     background-color:#fff;
@@ -201,7 +212,50 @@ textarea {
      height:2em;
 }
 
+#shift, #encryptbox, #decryptbox {
+  background-color: black;
+  border: double;
+  border-color: #00ff00;
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  left: 300px;
+}
 
+#encryptedbox, #decryptedbox {
+  background-color: black;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
+  color: white;
+  position: relative;
+  left: 300px;
+}
+
+h1 {
+  padding-bottom: 10px;
+}
+
+input::-webkit-input-placeholder {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input:-ms-input-placeholder {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

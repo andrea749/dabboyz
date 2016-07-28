@@ -30,6 +30,8 @@ from trifid import find
 from trifid import slice_list
 from trifid import trifid_encryptor
 from trifid import trifid_decryptor
+from columnar import columnar_encryptor
+from columnar import columnar_decryptor
 
 
 
@@ -250,45 +252,69 @@ class TrifidHandler(webapp2.RequestHandler):
 
 class ColumnarHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('cycle.html')
-        self.response.write(template.render())
+        template = jinja_environment.get_template('columnar.html')
+        ciphername = ciphers['columnar']['name']
+        cipherdescription = ciphers['columnar']['description']
+        variables = {
+        'ciphername':ciphername,
+        'cipherdescription':cipherdescription
+        }
+        self.response.write(template.render(variables))
 
     def post(self):
-        template = jinja_environment.get_template('cycle.html')
-        decision = self.request.get('submitted')
+        self.response.headers['Content-Type'] = 'application/json'
+        message2encrypt = self.request.get('message2encrypt')
+        message2decrypt = self.request.get('message2decrypt')
+        code_word = self.request.get('code_word')
+        try:
+            encrypted = self.Encryptor(message2encrypt)
+        except:
+            pass
+        try:
+            decrypted = self.Decryptor(message2decrypt)
+        except:
+            pass
+        resp = {
+          'encrypted': encrypted,
+          'decrypted': decrypted
+        }
+        return self.response.write(json.dumps(resp))
 
-        if not self.request.get('code_word'):
-            code_word = 'ERROR: Please input shift parameter.'
-            variable = {'code_word':code_word}
-            self.response.write(template.render(variable))
-
-        else:
-            if decision == 'Encrypt':
-                decryptedmessage = self.request.get('normal_message')
-                encryptedmessage = self.Encryptor(decryptedmessage)
-
-            if decision == 'Decrypt':
-                encryptedmessage = self.request.get('encrypted_message')
-                decryptedmessage = self.Decryptor(encryptedmessage)
-            code_word = self.request.get('code_word')
-
-            variables = {
-            'encryptedmessage':encryptedmessage,
-            'decryptedmessage':decryptedmessage,
-            'code_word':code_word
-            }
-            self.response.write(template.render(variables))
+        # template = jinja_environment.get_template('cycle.html')
+        # decision = self.request.get('submitted')
+        #
+        # if not self.request.get('code_word'):
+        #     code_word = 'ERROR: Please input shift parameter.'
+        #     variable = {'code_word':code_word}
+        #     self.response.write(template.render(variable))
+        #
+        # else:
+        #     if decision == 'Encrypt':
+        #         decryptedmessage = self.request.get('normal_message')
+        #         encryptedmessage = self.Encryptor(decryptedmessage)
+        #
+        #     if decision == 'Decrypt':
+        #         encryptedmessage = self.request.get('encrypted_message')
+        #         decryptedmessage = self.Decryptor(encryptedmessage)
+        #     code_word = self.request.get('code_word')
+        #
+        #     variables = {
+        #     'encryptedmessage':encryptedmessage,
+        #     'decryptedmessage':decryptedmessage,
+        #     'code_word':code_word
+        #     }
+        #     self.response.write(template.render(variables))
 
     def Encryptor(self, message):
         decryptedmessage = message
         code_word = str(self.request.get('code_word'))
-        answer = cycle_encryptor(decryptedmessage, code_word)
+        answer = columnar_encryptor(decryptedmessage, code_word)
         return answer
 
     def Decryptor(self, message):
         encryptedmessage = message
         code_word = str(self.request.get('code_word'))
-        answer = cycle_decryptor(encryptedmessage, code_word)
+        answer = columnar_decryptor(encryptedmessage, code_word)
         return answer
 
 
@@ -300,5 +326,5 @@ app = webapp2.WSGIApplication([
     ('/cycle', CycleHandler),
     ('/caesar', CaesarHandler),
     ('/trifid', TrifidHandler),
-    ('/columnar',ColumnarHandler)
+    ('/columnar', ColumnarHandler)
 ], debug=True)

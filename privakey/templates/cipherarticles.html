@@ -15,27 +15,28 @@ this file is for the Caesar cipher article -->
     <form action = '/' method = 'post'>
       <button id = 'webname' type = 'Submit'>Privakey</button>
     </form>
-    <h1>{{ciphername}} Cipher</h1>
+    <h1>Vigenere Cipher</h1>
       <p id = 'ciphers'>Ciphers</p>
         <p><form action = 'caesar'>
         <button id = 'caesar' type = 'Submit'>
-          Caesar</button>
+          <span>Caesar</span></button>
       </form>
       <form action = 'cycle'>
         <button id = 'vigenere' type = 'Submit'>
-          Vigenere</button>
+          <span>Vigenere</span></button>
       </form>
       <form action = 'trifid'>
-       <button id = 'trifid' type = 'Submit'>Trifid</button>
+       <button id = 'trifid' type = 'Submit'>
+         <span>Trifid</span></button>
      </form>
       </p>
 
     <p id = 'description'>{{cipherdescription}}<p><br>
 
-      <input id = 'shift' type = 'number' name = 'shift' min = '1' max = '26'>
+      <input id = 'shift' type = 'number' name = 'shift' min = '1' max = '26' placeholder="#">
 
-      <input type = 'text' name='fname' class='chatinput' id = 'encryptbox'>
-      <input type = 'text' name='fname' class='chatinput' id = 'decryptbox'>
+      <input type = 'text' name='fname' class='chatinput' id = 'encryptbox' placeholder="encrypt">
+      <input type = 'text' name='fname' class='chatinput' id = 'decryptbox' placeholder="decrypt">
 
       <div class='printchatbox' id='encryptedbox'></div>
       <div class='printchatbox' id='decryptedbox'></div>
@@ -47,6 +48,3 @@ this file is for the Caesar cipher article -->
 
   </body>
 </html>
-
-
-<!-- include image for tab icon -->
