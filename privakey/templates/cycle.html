@@ -11,7 +11,7 @@
   <script src="static/cycle.js"></script>
 </head>
 <body>
-    <form action = '/' method = 'post'>
+  <form action = '/' method = 'post'>
     <button id = 'webname' type = 'Submit'>Privakey</button>
   </form>
     <h1>Vigenere Cipher</h1>
@@ -25,6 +25,11 @@
     <form action = 'trifid'>
     <button id = 'trifid' type = 'Submit'><span>Trifid</span></button>
     </form>
+    <form action = 'columnar'>
+    <button id = 'columnar' type = 'Submit'>
+      <span>Columnar</span>
+    </button>
+    </form>
     </p>
     <p id = 'description'>{{cipherdescription}}</p>
     <form method = 'post' id = 'form_text'>
@@ -34,6 +39,7 @@
     <input type = 'text' name='fname' class='chatinput' id = 'decryptbox' placeholder="decrypt">
 
     <div class='printchatbox' id='encryptedbox'></div>
+
     <div class='printchatbox' id='decryptedbox'></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" type="text/javascript" ></script>

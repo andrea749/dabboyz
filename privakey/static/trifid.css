@@ -93,15 +93,16 @@ h1 {
 }
 
 #webname {
+  top: 20px;
+  text-align: center;
   font-family: 'Audiowide', cursive;
-  background-color: black;
+  background-color: transparent;
   display: block;
-  width: 20%;
-  margin: 0 auto;
+  margin-right: 380px;
+  margin-left: 330px;
   position: relative;
-  font-size: 60px;
+  font-size: 80px;
   color: white;
-  clear: both;
   text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
 }
 
@@ -272,6 +273,10 @@ input:-ms-input-placeholder {
   color: white;
   position: relative;
   left: 275px;
+}
+
+#decryptedbox {
+  text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
 }
 
 /*textarea {

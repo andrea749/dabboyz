@@ -24,6 +24,10 @@ button {
   position: relative;
   left: 400px;
   bottom: 200px;
+  position: relative;
+  left: 0px;
+  top: 40px;
+  border: none;
 }
 
 textarea {
@@ -34,12 +38,7 @@ textarea {
   bottom: 200px;
 }
 
-button {
-  position: relative;
-  left: 0px;
-  top: 40px;
-  border: none;
-}
+
 
 #caesar:hover, #vigenere:hover, #trifid:hover {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
@@ -73,6 +72,7 @@ button {
 p {
   font-family: 'Source Sans Pro', sans-serif;
   color: #00ff00
+
 }
 
 h1 {
@@ -81,19 +81,19 @@ h1 {
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
   color: white;
   position: relative;
-  top: 25px;
+  top: 10px;
   left: 50px;
+  bottom: 90px;
 }
 
 #webname {
   top: 30px;
-  right: 600px;
   text-align: center;
   font-family: 'Audiowide', cursive;
   background-color: black;
   display: block;
   margin right: 480px;
-  margin-left: 350px;
+  margin-left: 340px;
   position: relative;
   font-size: 80px;
   color: white;
@@ -233,6 +233,10 @@ textarea {
   left: 300px;
 }
 
+#decryptedbox {
+  text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
+}
+
 h1 {
   padding-bottom: 10px;
 }
@@ -255,6 +259,11 @@ input::-moz-placeholder {  /* Firefox 19+ */
 input:-ms-input-placeholder {
   color: #00ff00;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+#copyButton {
+ color: white
+ border: double
 }
 
 /* Smartphones (portrait and landscape) ----------- */
