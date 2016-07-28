@@ -306,5 +306,5 @@ app = webapp2.WSGIApplication([
     ('/cycle', CycleHandler),
     ('/caesar', CaesarHandler),
     ('/trifid', TrifidHandler),
-    ('/columnar', ColumnarHandler)
+    ('/columnar', ColumnarHandler),
 ], debug=True)
