@@ -12,7 +12,7 @@ function runPyScript(message, code_word){
           document.getElementById('encryptedbox').innerHTML = result['encrypted'];
         },
         error: function() {
-          alert("FAIL");
+          document.getElementById('decryptedbox').innerHTML = 'Error'
         },
     });
 
@@ -30,7 +30,8 @@ function runDecryptor(message, code_word){
           document.getElementById('decryptedbox').innerHTML = result['decrypted'];
         },
         error: function() {
-          alert("FAIL");
+          document.getElementById('decryptedbox').innerHTML = 'Error'
+          // alert("FAIL");
         },
     });
 

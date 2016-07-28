@@ -277,6 +277,10 @@ input:-ms-input-placeholder {
   left: 275px;
 }
 
+#decryptedbox {
+  text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
+}
+
 /*textarea {
   position: relative;
 }*/

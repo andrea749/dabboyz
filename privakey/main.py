@@ -21,6 +21,7 @@ import jinja2
 import os
 import math
 import json
+import random
 from cipherinfo import ciphers
 from cycle_encryption import cycle_encryptor
 from cycle_encryption import cycle_decryptor
@@ -251,9 +252,7 @@ class ColumnarHandler(webapp2.RequestHandler):
         message2decrypt = self.request.get('message2decrypt')
         code_word = self.request.get('code_word')
         encrypted = self.Encryptor(message2encrypt)
-
-
-        decrypted = ''
+        decrypted = self.Decryptor(message2decrypt)
         resp = {
           'encrypted': encrypted,
           'decrypted': decrypted
@@ -306,5 +305,5 @@ app = webapp2.WSGIApplication([
     ('/cycle', CycleHandler),
     ('/caesar', CaesarHandler),
     ('/trifid', TrifidHandler),
-    ('/columnar', ColumnarHandler)
+    ('/columnar', ColumnarHandler),
 ], debug=True)

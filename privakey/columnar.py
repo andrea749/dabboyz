@@ -1,6 +1,7 @@
 #This program runs a columnar transposition cipher.
 
 import math
+import random
 
 def columnar_encryptor(message, code_word):
      Alphabet = (
@@ -68,12 +69,11 @@ def columnar_decryptor(message, code_word):
      decrypted = []
 
 
-
-     for i in range(0,len(code_word)):
-         letter = code_word[i]
-         j = code_word_list.index(letter)
-         for sequence in range (0,cycle_number):
-             position = i + len(code_word) * sequence
+     for currentcycle in range (0,cycle_number):
+         for i in range(0,len(code_word)):
+             letter = code_word[i]
+             j = code_word_list.index(letter)
+             position = j*cycle_number+currentcycle
              decrypted.append(message[position])
      decryptedmessage = "".join(decrypted)
      return decryptedmessage
