@@ -12,7 +12,8 @@ function runPyScript(message, shift){
           document.getElementById('encryptedbox').innerHTML = result['encrypted'];
         },
         error: function() {
-          alert("FAIL");
+          document.getElementById('decryptedbox').innerHTML = 'Error'
+          // alert("FAIL");
         },
     });
 
@@ -30,7 +31,8 @@ function runDecryptor(message, shift){
           document.getElementById('decryptedbox').innerHTML = result['decrypted'];
         },
         error: function() {
-          alert("FAIL");
+          document.getElementById('decryptedbox').innerHTML = 'Error'
+          // alert("FAIL");
         },
     });
 

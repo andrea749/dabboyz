@@ -113,6 +113,15 @@ p {
   color: #00ff00
 }
 
+
+/*h1 {
+  top: 30px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
+  color: white;
+}*/
+
 #webname {
   top: 20px;
   text-align: center;

@@ -9,7 +9,6 @@ c.width = window.innerWidth;
 
 //binary code//
 var binary = ["01010000","01010010", "01001001", "01010110", "01000001","01001011", "01000101","01011001"];
-//converting the string into an array of single characters
 
 var font_size = 20;
 var columns = c.width/font_size; //number of columns for the rain
@@ -60,3 +59,12 @@ function draw()
 
 setInterval(draw, 33);
 }
+
+
+$(function(){
+		$("button").hover(function(){
+				$(this).css("text-shadow", "0 0 20px #ff0000, 0 0 20px #0F0, 0 0 20px #0000ff, 0 0 20px #0F0, 0 0 20px #0F0, 0 0 20px #0F0, 0 0 20px");
+			}, function(){
+				$(this).css("text-shadow", "0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0F0, 0 0 20px");
+		});
+	});
