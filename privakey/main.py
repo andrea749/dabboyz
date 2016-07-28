@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+import sys
 import webapp2
 import logging
 import jinja2
@@ -224,23 +225,6 @@ class TrifidHandler(webapp2.RequestHandler):
         }
         return self.response.write(json.dumps(resp))
 
-        # template = jinja_environment.get_template('trifid.html')
-        # decision = self.request.get('submitted')
-        #
-        # if decision == 'Encrypt':
-        #     decryptedmessage = self.request.get('normal_message')
-        #     encryptedmessage = self.Encryptor(decryptedmessage)
-        #
-        # if decision == 'Decrypt':
-        #     encryptedmessage = self.request.get('encrypted_message')
-        #     decryptedmessage = self.Decryptor(encryptedmessage)
-        #
-        # variables = {
-        # 'encryptedmessage':encryptedmessage,
-        # 'decryptedmessage':decryptedmessage
-        # }
-        # self.response.write(template.render(variables))
-
     def Encryptor(self, message):
         answer = trifid_encryptor(message)
         return answer
@@ -266,14 +250,10 @@ class ColumnarHandler(webapp2.RequestHandler):
         message2encrypt = self.request.get('message2encrypt')
         message2decrypt = self.request.get('message2decrypt')
         code_word = self.request.get('code_word')
-        try:
-            encrypted = self.Encryptor(message2encrypt)
-        except:
-            pass
-        try:
-            decrypted = self.Decryptor(message2decrypt)
-        except:
-            pass
+        encrypted = self.Encryptor(message2encrypt)
+
+
+        decrypted = ''
         resp = {
           'encrypted': encrypted,
           'decrypted': decrypted
