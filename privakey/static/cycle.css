@@ -190,6 +190,7 @@ input:-ms-input-placeholder {
   font-size: 25pt;
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
   color: white;
+
 }
 
 #decryptedbox {

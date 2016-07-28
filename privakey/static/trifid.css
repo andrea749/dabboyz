@@ -63,7 +63,6 @@ button {
   position: relative;
   left: 0px;
   top: 40px;
-  background-color: black;
   border: none;
 }
 
@@ -188,7 +187,6 @@ body {
 #description {
   margin-left: 10%;
   margin-right: 10%;
-  position: absolute;
   top: 200px;
   text-align: center;
   left: 150px;
@@ -268,7 +266,7 @@ button {
 }
 
 #encryptbox, #decryptbox, #encryptedbox, #decryptedbox {
-  position: relative;
+
   left: 350px;
   top: 275px;
   background-color: black;
@@ -318,6 +316,8 @@ input:-ms-input-placeholder {
 #decryptedbox {
   text-shadow: 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
 }
+
+
 
 /*textarea {
   position: relative;
