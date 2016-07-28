@@ -43,6 +43,13 @@ ciphers = {
     },
     'columnar':{
     'name': 'Columnar Transposition',
-    'description': 'LEEDLELEEDLELEEEEE'
+    'description': 'Unlike the other ciphers on this cite, the Columnar Transposition\
+    cipher is not a substitution cipher. Rather than encrypting each letter, this cipher\
+    rearranges their order with the use of a key word. The letters of the message are\
+    arranged into rows of the length of the key word. The columns are then rearranged\
+    by the alphabetical order of the letters of the key word. For example, the message\
+    "whereami" with the keyword "boys" would encrypt to "wehariem". The limits of this\
+    cipher are that there can be no spaces and the length of the message must be a multiple\
+    of that of the key word.'
     }
 }
