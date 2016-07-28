@@ -12,15 +12,16 @@
 #sidebar {
   display: inline-block;
   position: relative;
-  top: 10px;
   left: 0px;
   border-color: #00ff00;
   padding-right: 20px;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-bottom: 10px;
 }
 
-#caesar, #vigenere, #trifid {
+#caesar, #vigenere, #trifid, #columnar {
+  text-align: left;
+  width: 100%;
   color: #00ff00;
   background-color: black;
   text-decoration: none;
@@ -46,13 +47,17 @@
   padding-left: 0px;
 }
 
+
 #container1 {
+  padding-left: 20px;
+}
+/*#container1 {
   float:right;
   width:75%;
   position: relative;
   right: 25%;
-}
-#container2 {
+}*/
+/*#container2 {
   float: right;
   width: 100%;
   position: relative;
@@ -63,47 +68,67 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  position: relative;
+}*/
+
+/*#container3, #container2, #container1 {
+  top: 0px;
+  bottom: 350px;
+}*/
+
+td {
+  margin-left: 0;
+  vertical-align: top;
+  margin-top: 0;
+  padding-top: 0;
 }
+
+.describe {
+  border: double;
+  border-color: #00ff00;
+  padding-left: 5px;
+
+}
+
 #statement, #history, #details {
   color: #00ff00;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   margin-left: auto;
   margin-right: auto;
-  border-color: #00ff00;
+  /*border-color: #00ff00;*/
   display: inline;
-  border: double;
-  padding-top: 5px;
+  /*border: double;*/
+  /*padding-top: 5px;
   padding-right: 5px;
   padding-bottom: 5px;
-  padding-left: 5px;
+  padding-left: 5px;*/
   text align: center;
 }
 #statement {
   float:left;
   width:30%;
   position: relative;
-  left: 64%;
+  /*left: 64%;*/
   overflow: hidden;
 }
 #history {
   float:left;
   width:30%;
   position: relative;
-  left: 69%;
+  /*left: 69%;*/
   overflow: hidden;
 }
 #details {
   float:left;
   width:30%;
   position: relative;
-  left: 74%;
+  /*left: 74%;*/
   overflow: hidden;
 }
 
 #statement, #history, #details {
-  /* try to move up title of boxes or take them completely out of boxes, and remove empty space above and inside boxes*/
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #statement_title, #history_title, #details_title {
@@ -133,14 +158,12 @@ h1 {
 }
 
 #webname {
-  top: 30px;
-  right: 140px;
   text-align: center;
   font-family: 'Audiowide', cursive;
   background-color: black;
   display: block;
-  margin right: 480px;
-  margin-left: 480px;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
   font-size: 80px;
   color: white;
@@ -168,9 +191,10 @@ h1 {
 }
 
 #description {
-  margin-left: 20%;
-  margin-right: auto;
-  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  text-align: center;
   bottom: 180px;
   top: 0px;
   font-size: 40px;
@@ -184,7 +208,7 @@ textarea {
 button {
   border: none;
 }
-#vigenere:hover, #caesar:hover, #trifid:hover {
+#vigenere:hover, #caesar:hover, #trifid:hover, #columnar:hover {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
 }
 
@@ -212,6 +236,13 @@ button {
   content: "Taruio";
 }
 
+#columnar:hover span {
+  display: none;
+}
+
+#columnar:hover:before {
+  content: "Oncmurla";
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
