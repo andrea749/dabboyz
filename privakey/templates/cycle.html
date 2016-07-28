@@ -16,21 +16,21 @@
     <h1>Vigenere Cipher</h1>
     <p id = 'ciphers'>Ciphers</p>
     <p><form action = 'caesar'>
-    <button id = 'caesar' type = 'Submit'>Caesar</button>
+    <button id = 'caesar' type = 'Submit'><span>Caesar</span></button>
     </form>
     <form action = 'cycle'>
-    <button id = 'vigenere' type = 'Submit'>Vigenere</button>
+    <button id = 'vigenere' type = 'Submit'><span>Vigenere</span></button>
     </form>
     <form action = 'trifid'>
-    <button id = 'trifid' type = 'Submit'>Trifid</button>
+    <button id = 'trifid' type = 'Submit'><span>Trifid</span></button>
     </form>
     </p>
     <p id = 'description'>{{cipherdescription}}</p>
     <form method = 'post' id = 'form_text'>
 
-    <input type = 'text' id = 'code_word'>
-    <input type = 'text' name='fname' class='chatinput' id = 'encryptbox'>
-    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox'>
+    <input type = 'text' id = 'code_word' placeholder="code word here">
+    <input type = 'text' name='fname' class='chatinput' id = 'encryptbox' placeholder="encrypt">
+    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox' placeholder="decrypt">
 
     <div class='printchatbox' id='encryptedbox'></div>
     <div class='printchatbox' id='decryptedbox'></div>

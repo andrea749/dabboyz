@@ -203,6 +203,76 @@ button {
      height:2em;
 }
 
+#caesar:hover span {
+  display: none;
+}
+
+#caesar:hover:before {
+  content: "Dbftbs";
+}
+
+#vigenere:hover span {
+  display: none;
+}
+
+#vigenere:hover:before {
+  content: "Wkjfphsg";
+}
+
+#trifid:hover span {
+  display: none;
+}
+
+#trifid:hover:before {
+  content: "Taruio";
+}
+
+#encryptbox, #decryptbox, #encryptedbox, #decryptedbox {
+  position: relative;
+  left: 350px;
+  top: 275px;
+  background-color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#encryptbox, #decryptbox {
+  border: double;
+  border-color: #00ff00;
+  color: #00ff00;
+  margin-top: 40px;
+  left: 275px;
+}
+
+input::-webkit-input-placeholder {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input:-ms-input-placeholder {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#encryptedbox, #decryptedbox {
+  background-color: black;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
+  color: white;
+  position: relative;
+  left: 275px;
+}
 
 /*textarea {
   position: relative;

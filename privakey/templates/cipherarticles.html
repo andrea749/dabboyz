@@ -15,6 +15,7 @@ this file is for the Caesar cipher article -->
     <form action = '/' method = 'post'>
       <button id = 'webname' type = 'Submit'>Privakey</button>
     </form>
+    <h1>Vigenere Cipher</h1>
       <p id = 'ciphers'>Ciphers</p>
         <p><form action = 'caesar'>
         <button id = 'caesar' type = 'Submit'>
@@ -32,10 +33,10 @@ this file is for the Caesar cipher article -->
 
     <p id = 'description'>{{cipherdescription}}<p><br>
 
-      <input id = 'shift' type = 'number' name = 'shift' min = '1' max = '26'>
+      <input id = 'shift' type = 'number' name = 'shift' min = '1' max = '26' placeholder="#">
 
-      <input type = 'text' name='fname' class='chatinput' id = 'encryptbox'>
-      <input type = 'text' name='fname' class='chatinput' id = 'decryptbox'>
+      <input type = 'text' name='fname' class='chatinput' id = 'encryptbox' placeholder="encrypt">
+      <input type = 'text' name='fname' class='chatinput' id = 'decryptbox' placeholder="decrypt">
 
       <div class='printchatbox' id='encryptedbox'></div>
       <div class='printchatbox' id='decryptedbox'></div>
