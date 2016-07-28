@@ -188,6 +188,31 @@ button {
   text-shadow: 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff, 0 0 20px #ffffff;
 }
 
+#caesar:hover span {
+  display: none;
+}
+
+#caesar:hover:before {
+  content: "Dbftbs";
+}
+
+#vigenere:hover span {
+  display: none;
+}
+
+#vigenere:hover:before {
+  content: "Wkjfphsg";
+}
+
+#trifid:hover span {
+  display: none;
+}
+
+#trifid:hover:before {
+  content: "Taruio";
+}
+
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 /* Styles */

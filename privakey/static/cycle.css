@@ -20,7 +20,7 @@ h1 {
   right: 20px;
   text-align: center;
   font-family: 'Audiowide', cursive;
-  background-color: black;
+  background-color: transparent;
   display: block;
   margin-right: 380px;
   margin-left: 380px;
@@ -112,6 +112,67 @@ button {
     line-height: 2;color:#6E6A6B;font-size: 14pt;text-align:left;float: middle;
     border: 3px solid #969293;width:40%;
      height:2em;
+}
+
+#caesar:hover span {
+  display: none;
+}
+
+#caesar:hover:before {
+  content: "Dbftbs";
+}
+
+#vigenere:hover span {
+  display: none;
+}
+
+#vigenere:hover:before {
+  content: "Wkjfphsg";
+}
+
+#trifid:hover span {
+  display: none;
+}
+
+#trifid:hover:before {
+  content: "Taruio";
+}
+
+input::-webkit-input-placeholder {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input:-ms-input-placeholder {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#code_word, #encryptbox, #decryptbox {
+  background-color: black;
+  border: double;
+  border-color: #00ff00;
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#encryptedbox, #decryptedbox {
+  background-color: black;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
+  color: white;
 }
 
 /* Smartphones (portrait and landscape) ----------- */

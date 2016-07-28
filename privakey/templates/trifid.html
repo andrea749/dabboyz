@@ -9,27 +9,27 @@
 </head>
   <title>Trifid</title>
   <body>
-    <form action = ''>
+    <form action = '/' method="post">
       <button id = 'webname' type = 'Submit'>Privakey</button>
     </form>
     <p id = 'ciphers'>Ciphers</p>
     <p>
       <form action = 'caesar'>
-        <button id = 'caesar' type = 'Submit'>Caesar</button>
+        <button id = 'caesar' type = 'Submit'><span>Caesar</span></button>
       </form>
       <form action = 'cycle'>
-       <button id = 'vigenere' type = 'Submit'>Vigenere</button>
+       <button id = 'vigenere' type = 'Submit'><span>Vigenere</span></button>
      </form>
      <form action = 'trifid'>
-      <button id = 'trifid' type = 'Submit'>Trifid</button>
+      <button id = 'trifid' type = 'Submit'><span>Trifid</span></button>
     </form>
    </p>
     <h1 id = 'name_of_cipher'>{{ciphername}} Cipher</h1>
       <p id = 'description'>{{cipherdescription}}</p>
 
 
-    <input type = 'text' name='fname' class='chatinput' id = 'encryptbox'>
-    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox'>
+    <input type = 'text' name='fname' class='chatinput' id = 'encryptbox' placeholder="encrypt">
+    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox' placeholder="decrypt">
 
     <div class='printchatbox' id='encryptedbox'></div>
     <div class='printchatbox' id='decryptedbox'></div>

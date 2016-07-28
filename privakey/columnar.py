@@ -35,7 +35,6 @@ def columnar_encryptor(message, code_word):
          j = code_word.index(letter)
          letterlower = letter.lower()
          #pregap is the number of characters in the message before the current column
-         for sequence in range (0,cycle_size)
 
      return encryptedmessage
 

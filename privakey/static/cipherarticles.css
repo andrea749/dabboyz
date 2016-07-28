@@ -223,7 +223,7 @@ textarea {
 }
 
 #encryptedbox, #decryptedbox {
-  background-color: white;
+  background-color: black;
   border: none;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
@@ -231,6 +231,30 @@ textarea {
   color: white;
   position: relative;
   left: 300px;
+}
+
+h1 {
+  padding-bottom: 10px;
+}
+
+input::-webkit-input-placeholder {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+input:-ms-input-placeholder {
+  color: #00ff00;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
