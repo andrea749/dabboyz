@@ -18,6 +18,7 @@ body {
   text-shadow: 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff, 0 0 20px #0000ff;
   position: relative;
   bottom: 220px;
+  left: 230px;
 }
 
 button {
