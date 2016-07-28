@@ -63,4 +63,38 @@ decryptbox.onkeyup = function(){
 }
 
 
+
+var encryptCopyBtn = document.querySelector('#encryptcopy');
+
+encryptCopyBtn.addEventListener('click', function(event) {
+	var encryptedText = document.querySelector('#encryptedbox');
+  encryptedText.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+	  } catch (err) {
+	  console.log('Oops, unable to copy');
+  }
+});
+
+
+
+var decryptCopyBtn = document.querySelector('#decryptcopy');
+
+decryptCopyBtn.addEventListener('click', function(event) {
+	var decryptedText = document.querySelector('#decryptedbox');
+  decryptedText.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+	  } catch (err) {
+	  console.log('Oops, unable to copy');
+  }
+});
+
+
 }

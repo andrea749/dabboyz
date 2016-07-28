@@ -31,14 +31,19 @@
     </button>
     </form>
 
-      <p id = 'description'>{{cipherdescription}}</p>
+   <p id = 'description'>{{cipherdescription}}</p><br><br><br><br>
 
 
     <input type = 'text' name='fname' class='chatinput' id = 'encryptbox' placeholder="encrypt">
-    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox' placeholder="decrypt">
+    <input type = 'text' name='fname' class='chatinput' id = 'decryptbox' placeholder="decrypt"><br>
 
-    <div class='printchatbox' id='encryptedbox'></div>
-    <div class='printchatbox' id='decryptedbox'></div>
+    <textarea class='printchatbox' id='encryptedbox'></textarea><br>
+
+    <button id="encryptcopy">Copy Encryption</button>
+
+    <textarea class='printchatbox' id='decryptedbox'></textarea>
+
+    <button id="decryptcopy">Copy Decryption</button>
 
 
 

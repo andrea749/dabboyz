@@ -5,7 +5,7 @@
   <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
   <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
   <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="../static/columnar.css">
+  <link rel="stylesheet" type="text/css" href="../static/cycle.css">
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" type='text/javascript'> </script>
   <script src="static/cycle.js" type="text/javascript"></script>
@@ -42,8 +42,14 @@
     <input type = 'text' name='fname' class='chatinput' id = 'encryptbox' placeholder="encrypt">
     <input type = 'text' name='fname' class='chatinput' id = 'decryptbox' placeholder="decrypt">
 
-    <div class='printchatbox' id='encryptedbox'></div>
-    <div class='printchatbox' id='decryptedbox'></div>
+    <textarea class='printchatbox' id='encryptedbox'></textarea>
+
+    <button id="encryptcopy">Copy Encryption</button>
+
+    <textarea class='printchatbox' id='decryptedbox'></textarea>
+
+    <button id="decryptcopy">Copy Decryption</button>
+
     <script src='static/columnar_live_encryption.js'></script>
 </body>
 </html>
